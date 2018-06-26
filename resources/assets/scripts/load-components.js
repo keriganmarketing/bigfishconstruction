@@ -1,0 +1,1 @@
+// Vue.component('component-name', require('path/to/component'))
