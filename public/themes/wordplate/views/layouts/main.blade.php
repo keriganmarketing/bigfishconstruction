@@ -11,8 +11,9 @@
     <div id="app">
         <mobile-nav>
             {{ wp_nav_menu([
-                'theme_location' => 'primary-menu',
-                'menu_class'     => 'navbar-nav m-auto'
+                'theme_location' => 'mobile-navigation',
+                'menu_class'     => 'navbar-nav m-auto',
+                'fallback_cb'    => 'main-navigation'
             ]) }}
         </mobile-nav>
         <header>
@@ -24,12 +25,11 @@
                     <button @click="toggleMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobilemenu" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div id="mainmenu" class="collapse navbar-collapse">
-                        {{ wp_nav_menu([
-                            'theme_location' => 'primary-menu',
-                            'menu_class'     => 'navbar-nav ml-auto'
-                        ]) }}
-                    </div>
+                    {{ wp_nav_menu([
+                        'theme_location'  => 'main-navigation',
+                        'container_class' => 'collapse navbar-collapse',
+                        'menu_class'      => 'navbar-nav ml-auto'
+                    ]) }}
                 </div>
             </nav>
         </header>
