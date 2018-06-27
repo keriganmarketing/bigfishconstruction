@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c896042a0aca67ee7d32c06febc998d9",
+    "content-hash": "55954701d10396afc42764982bf5e5d5",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -764,6 +764,39 @@
                 "wordpress"
             ],
             "time": "2018-01-29T14:49:29+00:00"
+        },
+        {
+            "name": "kerigansolutions/kma-social-icons",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kerigansolutions/kma-social-icons.git",
+                "reference": "6534afd24096445250b0e05a86aaa473727dbe23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/6534afd24096445250b0e05a86aaa473727dbe23",
+                "reference": "6534afd24096445250b0e05a86aaa473727dbe23",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KeriganSolutions\\SocialMedia\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daron Adkins",
+                    "email": "daron@kerigan.com"
+                }
+            ],
+            "description": "WordPress module to configure social media icons",
+            "time": "2018-06-27T14:54:32+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1819,7 +1852,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "kerigansolutions/kma-social-icons": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

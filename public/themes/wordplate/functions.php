@@ -5,6 +5,11 @@ declare(strict_types=1);
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
+$socialLinks = new KeriganSolutions\SocialMedia\SocialSettingsPage();
+if (is_admin()) {
+    $socialLinks->createPage();
+}
+
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Disable the admin toolbar.
@@ -42,6 +47,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('wordplate');
 });
 
+
 // Remove JPEG compression.
 add_filter('jpeg_quality', function () {
     return 100;
@@ -51,3 +57,14 @@ add_filter('jpeg_quality', function () {
 add_filter('bladerunner/cache/path', function () {
     return '../../uploads/.cache';
 });
+
+function expand_login_logo()
+{ ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            width: auto;
+        }
+    </style>
+<?php
+}
+add_action('login_enqueue_scripts', 'expand_login_logo');

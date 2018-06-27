@@ -17,7 +17,7 @@ declare(strict_types=1);
 // Disable sidebar menu items.
 add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
-    // 'index.php', // dashboard
+    'index.php', // dashboard
     'upload.php', // media
 ]);
 

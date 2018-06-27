@@ -12,6 +12,10 @@
                 </header>
 
                 {{ the_content() }}
+                @foreach($socialLinks as $sl)
+                    {{ print_r($sl) }}
+                @endforeach
+
             </article>
 
         @endwhile
