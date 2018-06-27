@@ -7,34 +7,19 @@
   {{ wp_head() }}
 </head>
 <body {{ body_class() }}>
-
     <div id="app">
-        <mobile-nav>
-            {{ wp_nav_menu([
-                'theme_location' => 'mobile-navigation',
-                'menu_class'     => 'navbar-nav m-auto',
-                'fallback_cb'    => 'main-navigation'
-            ]) }}
-        </mobile-nav>
-        <header>
-            <nav role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark">
-                <div class="container d-flex justify-content-between">
-                    <a class="navbar-brand" href="/">
-                        WORDPLATE
-                    </a>
-                    <button @click="toggleMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobilemenu" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {{ wp_nav_menu([
-                        'theme_location'  => 'main-navigation',
-                        'container_class' => 'collapse navbar-collapse',
-                        'menu_class'      => 'navbar-nav ml-auto'
-                    ]) }}
-                </div>
-            </nav>
-        </header>
+        <div class="site-wrapper" :class="{'full-height': footerStuck, 'scrolling': isScrolling }">
+            <header>
+                <main-navigation main-nav="{{ $kma['mainNav'] }}" mobile-nav="{{ $kma['mobileNav'] }}" ></main-navigation>
+            </header>
 
-        @yield('content')
+            @yield('content')
+
+            <footer class="sticky-footer bg-dark py-4">
+                <social-icons :size="40" :margin=".25" :icon-data="{{ json_encode($kma['socialLinks']) }}" ></social-icons>
+                <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}.</p>
+            </footer>
+        </div>
     </div>
 
   {{ wp_footer() }}

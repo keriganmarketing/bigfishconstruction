@@ -1,3 +1,3 @@
 <?php
 
-bladerunner('views.pages.home');
+bladerunner('views.pages.home', [ 'kma' => $kma ]);

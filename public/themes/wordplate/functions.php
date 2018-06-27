@@ -70,3 +70,21 @@ function expand_login_logo()
 <?php
 }
 add_action('login_enqueue_scripts', 'expand_login_logo');
+
+// Register custom globals
+global $kma;
+
+$kma['mainNav'] = wp_nav_menu([
+    'theme_location'  => 'main-navigation',
+    'container_class' => 'collapse navbar-collapse',
+    'menu_class'      => 'navbar-nav ml-auto',
+    'echo'            => false
+]);
+
+$kma['mobileNav'] = wp_nav_menu([
+    'theme_location'  => 'mobile-navigation',
+    'menu_class'      => 'navbar-nav m-auto',
+    'echo'            => false
+]);
+
+$kma['socialLinks'] = (new \KeriganSolutions\SocialMedia\SocialSettingsPage())->getSocialLinks();

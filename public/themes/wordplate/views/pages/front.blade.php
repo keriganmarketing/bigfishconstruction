@@ -2,6 +2,7 @@
 
 @section('content')
 <main role="main">
+    <img src="https://placeimg.com/1000/350/tech" style="width:100%;" >
     <div class="container">
         @if (have_posts())
             @while (have_posts())
@@ -13,10 +14,7 @@
                     </header>
 
                     {{ the_content() }}
-                    @foreach($socialLinks as $sl)
-                        {{ print_r($sl) }}
-                    @endforeach
-
+                    
                 </article>
 
             @endwhile

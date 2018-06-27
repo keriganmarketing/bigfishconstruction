@@ -1,8 +1,36 @@
-body {
-    font-family: 'Heebo', sans-serif;
-    font-weight: 300;
+// Full page Layout
+html {
+    height: 100%;
 }
 
+body {
+    height: 100%;
+
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+
+    #app {
+        height: auto !important;
+        min-height: 100%;
+        overflow-x: initial;
+
+        .site-wrapper {
+            display: flex;
+            flex-direction: column;
+            
+            main {
+                flex-grow: 1;
+            }
+            
+            &.full-height {
+                height: 100vh;
+            }
+        }
+
+    }
+}
+  
+// Navigation
 ul.navbar-nav {
     list-style: none;
     display: flex;
@@ -22,6 +50,7 @@ ul.navbar-nav {
     }
 }
 
+// Body Content
 main {
     article {
         padding: 2rem 0 0;
@@ -31,5 +60,12 @@ main {
                 width: 200px;
             }
         }
+    }
+}
+
+footer {
+    .copyright {
+        color: #FFF;
+        font-size: 12px;
     }
 }

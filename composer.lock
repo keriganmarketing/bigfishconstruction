@@ -771,12 +771,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-social-icons.git",
-                "reference": "6534afd24096445250b0e05a86aaa473727dbe23"
+                "reference": "95050e646f4ac21b20f710efb545f5f3625b38b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/6534afd24096445250b0e05a86aaa473727dbe23",
-                "reference": "6534afd24096445250b0e05a86aaa473727dbe23",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/95050e646f4ac21b20f710efb545f5f3625b38b0",
+                "reference": "95050e646f4ac21b20f710efb545f5f3625b38b0",
                 "shasum": ""
             },
             "type": "library",
@@ -796,7 +796,7 @@
                 }
             ],
             "description": "WordPress module to configure social media icons",
-            "time": "2018-06-27T14:54:32+00:00"
+            "time": "2018-06-27T16:48:39+00:00"
         },
         {
             "name": "nesbot/carbon",

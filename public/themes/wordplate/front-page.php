@@ -1,3 +1,3 @@
 <?php
 
-bladerunner('views.pages.front', ['socialLinks' => (new \KeriganSolutions\SocialMedia\SocialSettingsPage())->getSocialLinks()]);
+bladerunner('views.pages.front', [ 'kma' => $kma ]);
