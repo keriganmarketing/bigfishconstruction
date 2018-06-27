@@ -1,7 +1,11 @@
-// Your life starts to suck below this line
-body {
-    background-color: pink;
-}
-.example {
-    color: red;
-}
+// Fonts
+@import "fonts";
+
+// Bootstrap
+@import "bootstrap";
+
+// WP Core
+@import "wordpress";
+
+// Theme
+@import "theme";
