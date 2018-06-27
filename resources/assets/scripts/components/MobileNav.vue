@@ -9,8 +9,14 @@
 <script>
     export default {
         props: {
-            mobileMenuOpen: false,
-            menuItems: []
+            mobileMenuOpen: {
+                type: Boolean,
+                default: false
+            },
+            menuItems: {
+                type: Array,
+                default: []
+            }
         },
 
         methods: {
