@@ -241,7 +241,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			$icon_html = '';
 			if ( ! empty( $icon_class_string ) ) {
 				// append an <i> with the icon classes to what is output before links.
-				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true"></i> ';
+				$icon_html = '<i class="' . esc_attr( $icon_class_string ) . '" aria-hidden="true">&nbsp;</i> ';
 			}
 
 			/** This filter is documented in wp-includes/post-template.php */
@@ -271,7 +271,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			// Put the item contents into $output.
-			$item_output .= isset( $args->link_before ) ? $args->link_before . $icon_html . $title . $args->link_after : '';
+			$item_output .= isset( $args->link_before ) ? $args->link_before . $title . $args->link_after : '';
 			/**
 			 * This is the end of the internal nav item. We need to close the
 			 * correct element depending on the type of link or link mod.
@@ -281,7 +281,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= self::linkmod_element_close( $linkmod_type, $attributes );
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
-				$item_output .= '</a>';
+				$item_output .= '</a>' . '<span class="nav-icon">' . $icon_html . '</span>';
 			}
 
 			$item_output .= isset( $args->after ) ? $args->after : '';
