@@ -3,8 +3,8 @@
             <a 
                 v-for="(icon) in iconData"
                 :key="icon.index" 
-                v-html="icon['1']" 
-                :href="icon['0']"
+                v-html="icon['icon']" 
+                :href="icon['link']"
                 :style="'width:' + size + 'px; margin:' + margin + 'rem;'"
                 target="_blank"
             ></a>
