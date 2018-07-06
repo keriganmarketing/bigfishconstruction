@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
-require template_path('includes/plugins/bootstrap-navwalker.php');
 
 $socialLinks = new KeriganSolutions\SocialMedia\SocialSettingsPage();
 if (is_admin()) {
@@ -71,23 +70,3 @@ function expand_login_logo()
 <?php
 }
 add_action('login_enqueue_scripts', 'expand_login_logo');
-
-// Register custom globals
-global $kma;
-
-$kma['mainNav'] = wp_nav_menu([
-    'theme_location'  => 'main-navigation',
-    'container_class' => 'collapse navbar-collapse',
-    'menu_class'      => 'navbar-nav ml-auto',
-    'echo'            => false,
-    'walker'          => new WP_Bootstrap_Navwalker()
-]);
-
-$kma['mobileNav'] = wp_nav_menu([
-    'theme_location'  => 'mobile-navigation',
-    'menu_class'      => 'navbar-nav m-auto',
-    'echo'            => false,
-    'walker'          => new WP_Bootstrap_Navwalker()
-]);
-
-$kma['socialLinks'] = (new \KeriganSolutions\SocialMedia\SocialSettingsPage())->getSocialLinks();

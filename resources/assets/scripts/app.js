@@ -1,5 +1,6 @@
 import "babel-polyfill"
 window.Vue = require('vue')
+window.axios = require("axios")
 require('./load-components')
 
 const app = new Vue({

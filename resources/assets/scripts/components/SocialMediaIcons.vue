@@ -1,7 +1,7 @@
 <template>
         <div class="d-flex justify-content-center social-icons">
             <a 
-                v-for="(icon) in iconData"
+                v-for="(icon) in socialData"
                 :key="icon.index" 
                 v-html="icon['icon']" 
                 :href="icon['link']"
@@ -14,10 +14,6 @@
 <script>
     export default {
         props: {
-            iconData: {
-                type: Object,
-                default: {} = []
-            },
             size: {
                 type: Number,
                 default: 30
@@ -26,6 +22,19 @@
                 type: Number,
                 default: 0
             }
+        },
+
+        data() {
+            return {
+                socialData: []
+            }
+        },
+
+        mounted () {
+            axios.get("/wp-json/kerigansolutions/v1/social-links/")
+                .then(response => {
+                    this.socialData = response.data; 
+                });
         }
     }
 </script>

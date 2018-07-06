@@ -10,13 +10,14 @@
     <div id="app">
         <div class="site-wrapper" :class="{'full-height': footerStuck, 'scrolling': isScrolling }">
             <header>
-                <main-navigation main-nav="{{ $kma['mainNav'] }}" mobile-nav="{{ $kma['mobileNav'] }}" ></main-navigation>
+                <main-navigation></main-navigation>
             </header>
 
             @yield('content')
 
             <footer class="sticky-footer bg-dark py-4">
-                <social-icons :size="40" :margin=".25" :icon-data="{{ json_encode($kma['socialLinks']) }}" ></social-icons>
+                <footer-menu></footer-menu>
+                <social-icons :size="40" :margin=".25" ></social-icons>
                 <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}.</p>
             </footer>
         </div>
