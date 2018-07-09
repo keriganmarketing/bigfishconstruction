@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "07f24e6ab943fb51f778cd8c0dbbc8fb",
+    "content-hash": "c79715e7ba85bcb591258b69d0c1ce03",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -639,20 +639,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.9.6",
+            "version": "4.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "ecca35c283591e3f40732522334415521f5aa4b7"
+                "reference": "6697a15cdfd60cfdf9f4bf04a4e7637a8d2a5afa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ecca35c283591e3f40732522334415521f5aa4b7",
-                "reference": "ecca35c283591e3f40732522334415521f5aa4b7",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/6697a15cdfd60cfdf9f4bf04a4e7637a8d2a5afa",
+                "reference": "6697a15cdfd60cfdf9f4bf04a4e7637a8d2a5afa",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "4.9.6",
+                "johnpbloch/wordpress-core": "4.9.7",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
             },
@@ -674,27 +674,27 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-05-17T20:03:03+00:00"
+            "time": "2018-07-05T18:12:19+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "4.9.6",
+            "version": "4.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "6ff81eb3d93d326b78a8bc0f120e72c161ec58c8"
+                "reference": "1116e10f71f8fb811856df212af652c427bc6bd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/6ff81eb3d93d326b78a8bc0f120e72c161ec58c8",
-                "reference": "6ff81eb3d93d326b78a8bc0f120e72c161ec58c8",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/1116e10f71f8fb811856df212af652c427bc6bd1",
+                "reference": "1116e10f71f8fb811856df212af652c427bc6bd1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "provide": {
-                "wordpress/core-implementation": "4.9.6"
+                "wordpress/core-implementation": "4.9.7"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -714,7 +714,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-05-17T20:02:55+00:00"
+            "time": "2018-07-05T18:12:13+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -766,17 +766,50 @@
             "time": "2018-01-29T14:49:29+00:00"
         },
         {
+            "name": "kerigansolutions/kma-slider-module",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kerigansolutions/kma-slider-module.git",
+                "reference": "18b8de4b66e0ed14e9c29ebe32d60fac25c90e84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/18b8de4b66e0ed14e9c29ebe32d60fac25c90e84",
+                "reference": "18b8de4b66e0ed14e9c29ebe32d60fac25c90e84",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KeriganSolutions\\KMASlider\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "programmer-man",
+                    "email": "bryan@kerigan.com"
+                }
+            ],
+            "description": "Home page slider module",
+            "time": "2018-07-09T16:21:57+00:00"
+        },
+        {
             "name": "kerigansolutions/kma-social-icons",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-social-icons.git",
-                "reference": "83e256a1da951b8edf5221e145e17dc72191b8b3"
+                "reference": "0a8034c520b1ff7f422cfbfacfa422e44b7e5e1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/83e256a1da951b8edf5221e145e17dc72191b8b3",
-                "reference": "83e256a1da951b8edf5221e145e17dc72191b8b3",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/0a8034c520b1ff7f422cfbfacfa422e44b7e5e1a",
+                "reference": "0a8034c520b1ff7f422cfbfacfa422e44b7e5e1a",
                 "shasum": ""
             },
             "type": "library",
@@ -796,7 +829,7 @@
                 }
             ],
             "description": "WordPress module to configure social media icons",
-            "time": "2018-07-05T15:23:25+00:00"
+            "time": "2018-07-06T19:12:45+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1829,6 +1862,26 @@
             "time": "2018-06-20T12:43:05+00:00"
         },
         {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "5.6.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "tags/5.6.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.6.10.zip",
+                "reference": "tags/5.6.10",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
             "name": "wpackagist-plugin/hide-updates",
             "version": "1.0",
             "source": {
@@ -1859,7 +1912,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-api.1.0.3.zip",
-                "reference": null,
+                "reference": "tags/1.0.3",
                 "shasum": null
             },
             "require": {

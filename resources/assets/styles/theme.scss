@@ -52,6 +52,10 @@ ul.navbar-nav {
 
 // Body Content
 main {
+    position: relative;
+    z-index: 1;
+    background: #FFF;
+
     article {
         padding: 2rem 0 0;
 
@@ -63,6 +67,27 @@ main {
     }
 }
 
+// Main Slider
+.slider-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    z-index: 0;
+
+    @media (min-width: 576px){
+        height: 350px;
+    }
+
+    @media (min-width: 768px){
+        height: 450px;
+    }
+
+    @media (min-width: 992px){
+        height: 650px;
+    }
+}
+
+// Footer
 footer {
     .copyright {
         color: #FFF;

@@ -10,6 +10,8 @@ if (is_admin()) {
     $socialLinks->createPage();
 }
 
+new KeriganSolutions\KMASlider\KMASliderModule();
+
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Disable the admin toolbar.

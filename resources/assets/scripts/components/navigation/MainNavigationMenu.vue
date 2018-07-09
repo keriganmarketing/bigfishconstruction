@@ -14,20 +14,8 @@
 <script>
     export default {
 
-        data () {
-            return {
-                mainNav: []
-            }
-        },
-
-        mounted () {
-            axios.get("/wp-json/wp-api-menus/v2/menu-locations/main-navigation")
-                .then(response => {
-                    response.data.forEach( item => {
-                        item.subMenuOpen = false;
-                        this.mainNav.push(item);
-                    });
-                });
+        props: {
+            mainNav: {}
         }
 
     }

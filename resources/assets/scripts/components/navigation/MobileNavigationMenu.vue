@@ -20,20 +20,8 @@
 <script>
     export default {
 
-        data () {
-            return {
-                mobileNav: []
-            }
-        },
-
-        mounted () {
-            axios.get("/wp-json/wp-api-menus/v2/menu-locations/mobile-navigation")
-                .then(response => {
-                    response.data.forEach( item => {
-                        item.subMenuOpen = false;
-                        this.mobileNav.push(item);
-                    });
-                });
+        props: {
+            mobileNav: {}
         },
 
         methods: {

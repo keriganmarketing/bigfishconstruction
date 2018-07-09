@@ -1,7 +1,7 @@
 <template>
-    <div role="navigation" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div role="navigation">
         <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer">
-            <mobile-menu></mobile-menu>
+            <mobile-menu :mobile-nav="mobileNav" ></mobile-menu>
         </div>
         <div class="container d-flex justify-content-between">
             <a class="navbar-brand" href="/">
@@ -11,7 +11,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="main-navigation collapse navbar-collapse">
-                <main-menu></main-menu>
+                <main-menu :main-nav="mainNav"></main-menu>
             </div>
         </div>
     </div>
@@ -23,7 +23,27 @@
         data () {
             return {
                 mobileMenuOpen: false,
+                mainNav: [],
+                mobileNav: []
             }
+        },
+
+        mounted () {
+            axios.get("/wp-json/wp-api-menus/v2/menu-locations/main-navigation")
+                .then(response => {
+                    response.data.forEach( item => {
+                        item.subMenuOpen = false;
+                        this.mainNav.push(item);
+                    });
+                });
+
+            axios.get("/wp-json/wp-api-menus/v2/menu-locations/mobile-navigation")
+                .then(response => {
+                    response.data.forEach( item => {
+                        item.subMenuOpen = false;
+                        this.mobileNav.push(item);
+                    });
+                });
         },
 
         methods: {

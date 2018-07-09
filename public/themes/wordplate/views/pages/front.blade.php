@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
+<kma-slider class="slider-container"></kma-slider>
 <main role="main">
-    <img src="https://placeimg.com/1000/350/tech" style="width:100%;" >
     <div class="container">
         @if (have_posts())
             @while (have_posts())

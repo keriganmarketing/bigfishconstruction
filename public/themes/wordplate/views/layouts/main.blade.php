@@ -10,7 +10,7 @@
     <div id="app">
         <div class="site-wrapper" :class="{'full-height': footerStuck, 'scrolling': isScrolling }">
             <header>
-                <main-navigation></main-navigation>
+                <main-navigation class="navbar navbar-expand-md navbar-dark bg-dark" ></main-navigation>
             </header>
 
             @yield('content')

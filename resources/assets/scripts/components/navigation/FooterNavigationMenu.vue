@@ -14,7 +14,7 @@
             }
         },
 
-        mounted () {
+        created () {
             axios.get("/wp-json/wp-api-menus/v2/menu-locations/footer-navigation")
                 .then(response => {
                     response.data.forEach( item => {
