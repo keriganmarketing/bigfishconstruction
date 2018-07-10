@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c79715e7ba85bcb591258b69d0c1ce03",
+    "content-hash": "e482fe06fdfadf423ef940f5f840fbbc",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -767,16 +767,16 @@
         },
         {
             "name": "kerigansolutions/kma-slider-module",
-            "version": "0.2",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-slider-module.git",
-                "reference": "18b8de4b66e0ed14e9c29ebe32d60fac25c90e84"
+                "reference": "b6d994994beea5b09a829f63abe02149297264e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/18b8de4b66e0ed14e9c29ebe32d60fac25c90e84",
-                "reference": "18b8de4b66e0ed14e9c29ebe32d60fac25c90e84",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/b6d994994beea5b09a829f63abe02149297264e7",
+                "reference": "b6d994994beea5b09a829f63abe02149297264e7",
                 "shasum": ""
             },
             "type": "library",
@@ -796,7 +796,7 @@
                 }
             ],
             "description": "Home page slider module",
-            "time": "2018-07-09T16:21:57+00:00"
+            "time": "2018-07-09T18:10:51+00:00"
         },
         {
             "name": "kerigansolutions/kma-social-icons",

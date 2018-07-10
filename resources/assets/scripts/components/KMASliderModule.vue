@@ -12,10 +12,7 @@
                     :class="{
                         'active': index == activeSlide
                     }"
-                    :style="{
-                        'background-image': 'url(' + slide.photo.url + ')',
-                        'z-index': index,
-                    }">
+                    :style="{ 'background-image': 'url(' + slide.photo.url + ')' }">
                     <a class="slidelink" v-if="(slide.href != '')" :href="slide.href" :target="slide.target" ></a>
                 </div>
             </div>
@@ -114,6 +111,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: #222;
     }
     .slide,
     .slider,
@@ -157,7 +155,7 @@
     }
     .slide.active {
         opacity: 1;
-        z-index: 0;
+        z-index: 20;
     }
     .slide-container {
         align-items: center;
