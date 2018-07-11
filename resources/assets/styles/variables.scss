@@ -62,7 +62,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       #a43535;
+$primary:       #b73838;
 $secondary:     #d54f1d;
 $success:       $green;
 $info:          $cyan;
@@ -209,8 +209,8 @@ $border-width:                1px;
 $border-color:                $gray-300;
 
 $border-radius:               0;
-$border-radius-lg:            .3rem;
-$border-radius-sm:            .2rem;
+$border-radius-lg:            0;
+$border-radius-sm:            0;
 
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
 $box-shadow:                  0 .5rem 1rem rgba($black, .15);
@@ -243,21 +243,24 @@ $font-size-sm:                ($font-size-base * .875);
 
 $font-weight-light:           300;
 $font-weight-normal:          400;
+$font-weight-medium:          500;
 $font-weight-bold:            700;
+$font-weight-bolder:          800;
+$font-weight-black:           900;
 
 $font-weight-base:            $font-weight-normal;
 $line-height-base:            1.5;
 
-$h1-font-size:                $font-size-base * 2.5;
-$h2-font-size:                $font-size-base * 2;
-$h3-font-size:                $font-size-base * 1.75;
-$h4-font-size:                $font-size-base * 1.5;
-$h5-font-size:                $font-size-base * 1.25;
+$h1-font-size:                $font-size-base * 1.8;
+$h2-font-size:                $font-size-base * 1.6;
+$h3-font-size:                $font-size-base * 1.4;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.1;
 $h6-font-size:                $font-size-base;
 
 $headings-margin-bottom:      ($spacer / 2);
 $headings-font-family:        inherit;
-$headings-font-weight:        500;
+$headings-font-weight:        700;
 $headings-line-height:        1.2;
 $headings-color:              inherit;
 
@@ -331,8 +334,8 @@ $table-caption-color:         $text-muted;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem;
-$input-btn-padding-x:         .75rem;
+$input-btn-padding-y:         .75rem;
+$input-btn-padding-x:         1rem;
 $input-btn-line-height:       $line-height-base;
 
 $input-btn-focus-width:       .2rem;

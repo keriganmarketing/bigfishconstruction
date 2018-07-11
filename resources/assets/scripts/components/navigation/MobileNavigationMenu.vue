@@ -1,5 +1,5 @@
 <template>
-    <ul class="navbar-nav m-auto">
+    <ul>
         <li v-for="(navitem, index) in mobileNav" v-bind:key="index" class="nav-item" :class="{'dropdown': navitem.children.length > 0 }">
             <a :href="navitem.url" :class="'nav-link ' + filterClasses(navitem.classes)">{{ navitem.title }}</a>
             <span class="nav-icon" v-if="navitem.children.length > 0" @click="toggleSubMenu(index)">
@@ -45,14 +45,11 @@
 </script>
 <style>
     .mobile-menu {
-        transition: left ease-in 1s;
         display: block;
         width: 100%;
         padding: 2rem 0;
-    }
-    .mobile-menu ul.navbar-nav li a {
-        text-align: right;
-        color: #FFF;
+        margin-top: -100%;
+        transition: all ease-in 1s;
     }
     .mobile-menu .nav-icon {
         font-size:1.2em;
@@ -63,11 +60,11 @@
         cursor: pointer;
     }
     .mobile-menu .dropdown-menu {
-        border-radius: 4px;
+        border-radius: 0;
         border: 0;
         display: block;
-        background-color: #222;
+        background-color: #FFF;
         padding: .5rem 1rem;
-        box-shadow: inset 0 0 5px #111;
+        box-shadow: inset 0 0 5px #555;
     }
 </style>

@@ -9,18 +9,15 @@
                     <img src="/themes/wordplate/assets/images/bigfish-logo.png" alt="Big Fish Construction" >
                 </a>
             </div>
-            <button @click="toggleMenu" class="d-xl-none btn btn-primary font-weight-bold" type="button" data-toggle="collapse" data-target="#mobilemenu" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars" aria-hidden="true"></i> MENU
+            <button @click="toggleMenu" class="d-xl-none btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#mobilemenu" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                MENU <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
             <div class="main-navigation collapse navbar-collapse flex-grow-0">
                 <main-menu :main-nav="mainNavRight" class="navbar-nav ml-auto"></main-menu>
             </div>
         </div>
-        <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer">
-            <mobile-menu :mobile-nav="mobileNav" :style="{
-                'left: 100%': !this.mobileMenuOpen,
-                'left: 0': this.mobileMenuOpen,
-            }" ></mobile-menu>
+        <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer" :class="{ 'open': this.mobileMenuOpen }" >
+            <mobile-menu :mobile-nav="mobileNav" class="navbar-nav m-auto" ></mobile-menu>
         </div>
     </div>
 </template>
