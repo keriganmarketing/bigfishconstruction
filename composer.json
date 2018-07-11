@@ -32,7 +32,8 @@
             "public/mu-plugins/{$name}": [
               "type:wordpress-muplugin",
               "wpackagist-plugin/hide-updates",
-              "wordplate/plate"
+              "wordplate/plate",
+              "ekandreas/bladerunner"
             ],
             "public/plugins/{$name}": ["type:wordpress-plugin"],
             "public/themes/{$name}": ["type:wordpress-theme"]

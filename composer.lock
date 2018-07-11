@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8acaa89f1bea0678113397796acc1c44",
+    "content-hash": "016dbe1a99e86fcd19a2f15a8866dc1c",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -1945,7 +1945,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-api.1.0.3.zip",
-                "reference": "tags/1.0.3",
+                "reference": null,
                 "shasum": null
             },
             "require": {
