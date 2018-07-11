@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d346aab07d2f546caf08565ec0219fb3",
+    "content-hash": "241a0935832e489ebc355fe7be6073b5",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -1905,7 +1905,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.6.10.zip",
-                "reference": "tags/5.6.10",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1945,7 +1945,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-api.1.0.3.zip",
-                "reference": "tags/1.0.3",
+                "reference": null,
                 "shasum": null
             },
             "require": {
