@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "241a0935832e489ebc355fe7be6073b5",
+    "content-hash": "e849866b1a300a69242839b78baad82e",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -767,16 +767,16 @@
         },
         {
             "name": "kerigansolutions/kma-portfolio-module",
-            "version": "0.2",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-portfolio-module.git",
-                "reference": "69a5ba3e04d2ae74dcf74c1a853e9f6cdf3042bd"
+                "reference": "6171a9c7fc9c1d619f016278cfa4313621061a71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-portfolio-module/zipball/69a5ba3e04d2ae74dcf74c1a853e9f6cdf3042bd",
-                "reference": "69a5ba3e04d2ae74dcf74c1a853e9f6cdf3042bd",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-portfolio-module/zipball/6171a9c7fc9c1d619f016278cfa4313621061a71",
+                "reference": "6171a9c7fc9c1d619f016278cfa4313621061a71",
                 "shasum": ""
             },
             "type": "library",
@@ -796,7 +796,7 @@
                 }
             ],
             "description": "A simple portfolio module for a brochure site",
-            "time": "2018-07-11T18:10:42+00:00"
+            "time": "2018-07-11T18:56:40+00:00"
         },
         {
             "name": "kerigansolutions/kma-slider-module",
@@ -1895,26 +1895,6 @@
             "time": "2018-06-20T12:43:05+00:00"
         },
         {
-            "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.6.10",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.6.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.6.10.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
-        },
-        {
             "name": "wpackagist-plugin/hide-updates",
             "version": "1.0",
             "source": {
@@ -1933,26 +1913,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/hide-updates/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-api",
-            "version": "1.0.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-api/",
-                "reference": "tags/1.0.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-api.1.0.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-api/"
         },
         {
             "name": "wpackagist-plugin/wp-api-menus",

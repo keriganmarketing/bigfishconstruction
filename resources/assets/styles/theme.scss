@@ -147,11 +147,6 @@ main {
         box-shadow: none;
     }
 
-    .header-image {
-        background-size: cover;
-        background-position: center;
-    }
-
     article {
         padding: 2rem 1rem 0;
         text-align: justify;
@@ -298,6 +293,24 @@ main {
             background-size: auto 439px;
             background-position-x: -40px;
         }
+    }
+}
+
+// Support Content
+.header-image {
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+
+    h1, h2 {
+        display: inline-block;
+        padding: 1rem 1rem;
+        border: 1px solid #FFF;
+        line-height: 1em;
+        margin: 1rem auto;
+        text-transform: uppercase;
     }
 }
 
