@@ -9,8 +9,8 @@
 <body {{ body_class() }}>
     <div id="app">
         <div class="site-wrapper" :class="{'full-height': footerStuck, 'scrolling': isScrolling }">
-            <header>
-                <main-navigation class="navbar navbar-expand-md navbar-dark bg-dark" ></main-navigation>
+            <header class="top">
+                <main-navigation class="navbar navbar-expand-xl" ></main-navigation>
             </header>
 
             @yield('content')

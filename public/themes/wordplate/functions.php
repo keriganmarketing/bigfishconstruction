@@ -35,7 +35,8 @@ add_action('after_setup_theme', function () {
 
     // Register navigation menus.
     register_nav_menus([
-        'main-navigation'   => __('Main Navigation', 'wordplate'),
+        'main-top-left'   => __('Desktop Top Left', 'wordplate'),
+        'main-top-right'   => __('Desktop Top Right', 'wordplate'),
         'mobile-navigation' => __('Mobile Navigation', 'wordplate'),
         'footer-navigation' => __('Footer Navigation', 'wordplate'),
     ]);

@@ -1,5 +1,5 @@
 <template>
-    <ul class="navbar-nav ml-auto">
+    <ul>
         <li v-for="(navitem, index) in mainNav" v-bind:key="index" class="nav-item" :class="{'dropdown': navitem.children.length > 0 }">
             <a :href="navitem.url" :class="'nav-link ' + navitem.classes">{{ navitem.title }}</a>
             <div class="dropdown-menu" v-if="navitem.children.length > 0" >
@@ -21,22 +21,25 @@
     }
 </script>
 <style>
+    .main-navigation li a.nav-link {
+        color: #848484;
+    }
     .dropdown-menu {
         border: 0;
         border-top: .5rem solid #999;
         margin-top: -1px;
         border-radius: 0;
         padding: 0;
-        background-color: #222; 
+        background-color: #FFF; 
     }
     .main-navigation .dropdown:hover .dropdown-menu {
         display: block;
     }
     .main-navigation .dropdown-menu li a.dropdown-item {
-        color: rgba(255, 255, 255, 0.5);
+        color: #FFF;
     }
     .main-navigation .dropdown-menu li a.dropdown-item:hover {
-        color: rgba(255, 255, 255, 0.8);
-        background-color: #111 ;
+        color: #848484;
+        background-color: #FFF ;
     }
 </style>
