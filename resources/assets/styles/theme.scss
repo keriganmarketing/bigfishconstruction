@@ -303,14 +303,26 @@ main {
     min-height: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @media (min-width: 768px){
+        min-height: 150px;
+    }
+
+    @media (min-width: 992px){
+        min-height: 200px;
+    }
 
     h1, h2 {
         display: inline-block;
-        padding: 1rem 1rem;
+        padding: .75rem 1rem;
         border: 1px solid #FFF;
+        height: 60px;
+        margin: 0;
         line-height: 1em;
-        margin: 1rem auto;
-        text-transform: uppercase;
+        font-size: 2.3em;
+        text-shadow: 0 0 15px rgba(0,0,0,.4);
+        box-shadow: 0 0 15px rgba(0,0,0,.2);
     }
 }
 
@@ -331,6 +343,15 @@ main {
 
     @media (min-width: 992px){
         height: 650px;
+    }
+}
+
+// Portfolio
+.portfolio-gallery {
+    padding: 2rem 1rem;
+    
+    .project-tile {
+        margin: .5rem 0;
     }
 }
 

@@ -37,6 +37,10 @@
 </main>
 @include('partials.map')
 <div class="projects-header header-image" style="background-image: url('{{ $projectsHeader['url'] }}')">
-    <h2 class="text-center text-capitalize text-white text-outlined">Projects</h2>
+    <h2 class="text-center text-uppercase text-white text-outlined">Projects</h2>
 </div>
+<div class="container">
+    <portfolio-gallery :limit="6" ></portfolio-gallery>
+</div>
+
 @endsection
