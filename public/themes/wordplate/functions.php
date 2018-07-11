@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
+require('post-types/project.php');
 
 $socialLinks = new KeriganSolutions\SocialMedia\SocialSettingsPage();
 if (is_admin()) {
