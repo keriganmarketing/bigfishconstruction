@@ -2,9 +2,12 @@
 
 declare(strict_types=1);
 
+use KeriganSolutions\KMAPortfolio\Portfolio;
+
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
+$portfolio = (new Portfolio())->use();
 //////////////////////////
 /**
  * Registers the `build_location` taxonomy,

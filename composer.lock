@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e482fe06fdfadf423ef940f5f840fbbc",
+    "content-hash": "8acaa89f1bea0678113397796acc1c44",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -304,7 +304,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -348,7 +348,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -392,7 +392,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -436,7 +436,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -481,16 +481,16 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "f94613a292fb6ba4ed040317ee6d119af364f577"
+                "reference": "2677365f61c66fad13ff12a37cd4fa8aaeb048d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/f94613a292fb6ba4ed040317ee6d119af364f577",
-                "reference": "f94613a292fb6ba4ed040317ee6d119af364f577",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/2677365f61c66fad13ff12a37cd4fa8aaeb048d2",
+                "reference": "2677365f61c66fad13ff12a37cd4fa8aaeb048d2",
                 "shasum": ""
             },
             "require": {
@@ -529,20 +529,20 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "https://laravel.com",
-            "time": "2018-06-07T19:01:13+00:00"
+            "time": "2018-07-07T14:54:27+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "b6de0557cb34ebbbdfbd59a0c97009cf4f7f21aa"
+                "reference": "97ca44c95392ce0a41749fa47b953734d88b94b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/b6de0557cb34ebbbdfbd59a0c97009cf4f7f21aa",
-                "reference": "b6de0557cb34ebbbdfbd59a0c97009cf4f7f21aa",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/97ca44c95392ce0a41749fa47b953734d88b94b1",
+                "reference": "97ca44c95392ce0a41749fa47b953734d88b94b1",
                 "shasum": ""
             },
             "require": {
@@ -587,20 +587,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-06-18T16:10:24+00:00"
+            "time": "2018-07-04T01:23:57+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.26",
+            "version": "v5.6.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "fd4f501d8e7aadd962cdfdb2e9d15587b2612291"
+                "reference": "625c35e8942f0ecd467acb8db8daf8449390d559"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/fd4f501d8e7aadd962cdfdb2e9d15587b2612291",
-                "reference": "fd4f501d8e7aadd962cdfdb2e9d15587b2612291",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/625c35e8942f0ecd467acb8db8daf8449390d559",
+                "reference": "625c35e8942f0ecd467acb8db8daf8449390d559",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +635,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2018-06-06T13:28:32+00:00"
+            "time": "2018-07-06T14:55:12+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -764,6 +764,39 @@
                 "wordpress"
             ],
             "time": "2018-01-29T14:49:29+00:00"
+        },
+        {
+            "name": "kerigansolutions/kma-portfolio-module",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kerigansolutions/kma-portfolio-module.git",
+                "reference": "bf3306c1ab07f6092362f8ae8fa0cf2aa2485605"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-portfolio-module/zipball/bf3306c1ab07f6092362f8ae8fa0cf2aa2485605",
+                "reference": "bf3306c1ab07f6092362f8ae8fa0cf2aa2485605",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KeriganSolutions\\KMAPortfolio\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daron Adkins",
+                    "email": "daron@kerigan.com"
+                }
+            ],
+            "description": "A simple portfolio module for a brochure site",
+            "time": "2018-07-11T17:49:04+00:00"
         },
         {
             "name": "kerigansolutions/kma-slider-module",
