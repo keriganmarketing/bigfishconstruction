@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e849866b1a300a69242839b78baad82e",
+    "content-hash": "11da23e13516d3f85a185bc2b23bea9d",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -796,20 +796,20 @@
                 }
             ],
             "description": "A simple portfolio module for a brochure site",
-            "time": "2018-07-11T22:02:35+00:00"
+            "time": "2018-07-11T21:17:25+00:00"
         },
         {
             "name": "kerigansolutions/kma-slider-module",
-            "version": "0.3",
+            "version": "0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-slider-module.git",
-                "reference": "b6d994994beea5b09a829f63abe02149297264e7"
+                "reference": "b1042284a777f8fcc55393718830ebf9b08dfd43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/b6d994994beea5b09a829f63abe02149297264e7",
-                "reference": "b6d994994beea5b09a829f63abe02149297264e7",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/b1042284a777f8fcc55393718830ebf9b08dfd43",
+                "reference": "b1042284a777f8fcc55393718830ebf9b08dfd43",
                 "shasum": ""
             },
             "type": "library",
@@ -829,7 +829,7 @@
                 }
             ],
             "description": "Home page slider module",
-            "time": "2018-07-09T18:10:51+00:00"
+            "time": "2018-07-11T18:38:25+00:00"
         },
         {
             "name": "kerigansolutions/kma-social-icons",

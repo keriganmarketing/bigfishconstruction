@@ -9,3 +9,4 @@ Vue.component('footer-menu', require('./components/navigation/FooterNavigationMe
 //plugins
 Vue.component('social-icons', require('./components/SocialMediaIcons.vue'));
 Vue.component('kma-slider', require('./components/KMASliderModule.vue'));
+Vue.component('portfolio-gallery', require('./components/PortfolioGallery.vue'));
