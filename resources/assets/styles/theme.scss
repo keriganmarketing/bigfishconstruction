@@ -147,6 +147,11 @@ main {
         box-shadow: none;
     }
 
+    .header-image {
+        background-size: cover;
+        background-position: center;
+    }
+
     article {
         padding: 2rem 1rem 0;
         text-align: justify;

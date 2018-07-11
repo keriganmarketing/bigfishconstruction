@@ -1,5 +1,7 @@
 @extends('layouts.main')
-
+@php
+    $projectsHeader = get_field('projects_header');
+@endphp
 @section('content')
 <kma-slider class="slider-container"></kma-slider>
 <main role="main">
@@ -34,4 +36,7 @@
     </div>
 </main>
 @include('partials.map')
+<div class="projects-header header-image" style="background-image: url('{{ $projectsHeader['url'] }}')">
+    <h2 class="text-center text-capitalize text-white text-outlined">Projects</h2>
+</div>
 @endsection
