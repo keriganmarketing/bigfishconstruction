@@ -6,8 +6,8 @@
     "require": {
         "php": "^7.1.3",
         "ekandreas/bladerunner": "^1.7",
-        "kerigansolutions/kma-portfolio-module": "^1.0",
-        "kerigansolutions/kma-slider-module": "^0.3.0",
+        "kerigansolutions/kma-portfolio-module": "^1.2",
+        "kerigansolutions/kma-slider-module": "^0.4.0",
         "kerigansolutions/kma-social-icons": "dev-master",
         "wordplate/framework": "^6.3",
         "wordplate/plate": "^4.0",

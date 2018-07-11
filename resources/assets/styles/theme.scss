@@ -353,6 +353,15 @@ main {
     .project-tile {
         margin: .5rem 0;
     }
+
+    .project-button {
+        margin-top: -2rem;
+        position: relative;
+
+        .btn {
+            background-color: #FFF;
+        }
+    }
 }
 
 // Footer
