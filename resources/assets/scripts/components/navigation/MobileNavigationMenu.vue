@@ -45,9 +45,14 @@
 </script>
 <style>
     .mobile-menu {
+        transition: left ease-in 1s;
         display: block;
         width: 100%;
         padding: 2rem 0;
+    }
+    .mobile-menu ul.navbar-nav li a {
+        text-align: right;
+        color: #FFF;
     }
     .mobile-menu .nav-icon {
         font-size:1.2em;

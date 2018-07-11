@@ -17,7 +17,10 @@
             </div>
         </div>
         <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer">
-            <mobile-menu :mobile-nav="mobileNav" ></mobile-menu>
+            <mobile-menu :mobile-nav="mobileNav" :style="{
+                'left: 100%': !this.mobileMenuOpen,
+                'left: 0': this.mobileMenuOpen,
+            }" ></mobile-menu>
         </div>
     </div>
 </template>

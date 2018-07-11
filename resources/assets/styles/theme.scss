@@ -73,6 +73,19 @@ body {
         right: 20px;
         z-index: 301;
     }
+
+    .mobile-menu {
+        display: block;
+        width: 100%;
+        padding: 2rem 0;
+        position: absolute;
+        z-index: 200;
+        background-color: $primary;
+        top: 83px;
+        left: 0;
+        padding: 2rem;
+        color: #FFF;
+    }
 }
   
 // Navigation
