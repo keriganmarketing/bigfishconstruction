@@ -1,12 +1,12 @@
 @extends('layouts.main')
 @php
     $projectsHeader = get_field('projects_header');
-    $featureBox1['title'] = get_field('feat_1_headline')
-    $featureBox1['text'] = get_field('feat_1_text')
-    $featureBox1['link'] = get_field('feat_1_link')
-    $featureBox2['title'] = get_field('feat_2_headline')
-    $featureBox2['text'] = get_field('feat_2_text')
-    $featureBox2['link'] = get_field('feat_2_link')
+    $featureBox1['title'] = get_field('feat_1_headline');
+    $featureBox1['text'] = get_field('feat_1_text');
+    $featureBox1['link'] = get_field('feat_1_link');
+    $featureBox2['title'] = get_field('feat_2_headline');
+    $featureBox2['text'] = get_field('feat_2_text');
+    $featureBox2['link'] = get_field('feat_2_link');
 @endphp
 @section('content')
 <kma-slider class="slider-container"></kma-slider>
@@ -22,11 +22,11 @@
                             <header>
                                 <h1 class="example">{{ the_title() }}</h1>
                             </header>
-        
+
                             {{ the_content() }}
 
                             <a href="/about-us/" class="btn btn-outline-primary" >Meet Our Team &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                            
+
                         </article>
                     </div>
                     <div class="col-lg-6">
@@ -46,12 +46,20 @@
     <h2 class="text-center text-uppercase text-white text-outlined">Projects</h2>
 </div>
 <div class="container">
-    <portfolio-gallery :limit="6" ></portfolio-gallery>
+    <portfolio-gallery :limit="6" :locations="{{ $locations }}" :construction-types="{{ $types }}"></portfolio-gallery>
 </div>
 <div class="testimonial-section">
 
 </div>
 <div class="feature-box-section">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>{{ $featureBox1['title'] }}</h3>
+                {{ $featureBox1['text'] }}
+                <a href="{{ $featureBox1['link'] }}" ></a>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
