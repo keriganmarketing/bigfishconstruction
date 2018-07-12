@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <li v-for="(navitem, index) in mainNav" v-bind:key="index" class="nav-item" :class="{'dropdown': navitem.children.length > 0 }">
+        <li v-for="(navitem, index) in navData" v-bind:key="navitem.ID" class="nav-item" :class="{'dropdown': navitem.children.length > 0 }">
             <a :href="navitem.url" :class="'nav-link ' + navitem.classes">{{ navitem.title }}</a>
             <div class="dropdown-menu" v-if="navitem.children.length > 0" >
                 <li v-for="(child, i) in navitem.children" v-bind:key="i">
@@ -16,6 +16,22 @@
 
         props: {
             mainNav: {}
+        },
+
+        data() {
+            return {
+                navData: {}
+            }
+        },
+        created () {
+            this.mainNav.forEach((navItem, index) => {
+                if (navItem.menu_item_parent == 0) {
+                    navItem.children = [];
+                    this.navData[String(navItem.ID)] = navItem;
+                } else {
+                    this.navData[String(navItem.menu_item_parent)].children.push(navItem);
+                }
+            })
         }
 
     }
@@ -30,7 +46,7 @@
         margin-top: -1px;
         border-radius: 0;
         padding: 0;
-        background-color: #FFF; 
+        background-color: #FFF;
     }
     .main-navigation .dropdown:hover .dropdown-menu {
         display: block;

@@ -12,13 +12,17 @@ const app = new Vue({
         windowWidth: 0,
         isScrolling: false,
         scrollPosition: 0,
-        footerStuck: false
+        footerStuck: false,
+        mobileMenuOpen: false
     },
 
     methods: {
         handleScroll () {
             this.scrollPosition = window.scrollY;
             this.isScrolling = this.scrollPosition > 40;
+        },
+        toggleMenu() {
+            this.mobileMenuOpen = ! this.mobileMenuOpen;
         }
     },
 
