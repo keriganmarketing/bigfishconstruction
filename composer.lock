@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "11da23e13516d3f85a185bc2b23bea9d",
+    "content-hash": "a4386c8eb7c92d4fe5ee092b503255b4",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -767,16 +767,16 @@
         },
         {
             "name": "kerigansolutions/kma-portfolio-module",
-            "version": "1.2",
+            "version": "1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-portfolio-module.git",
-                "reference": "5fd8bb6f8c7466bc93a1c785b9e34584d04b16de"
+                "reference": "2774614183ea969d44e3eb0bdf46ae901b47c9ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-portfolio-module/zipball/5fd8bb6f8c7466bc93a1c785b9e34584d04b16de",
-                "reference": "5fd8bb6f8c7466bc93a1c785b9e34584d04b16de",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-portfolio-module/zipball/2774614183ea969d44e3eb0bdf46ae901b47c9ee",
+                "reference": "2774614183ea969d44e3eb0bdf46ae901b47c9ee",
                 "shasum": ""
             },
             "type": "library",
@@ -796,7 +796,7 @@
                 }
             ],
             "description": "A simple portfolio module for a brochure site",
-            "time": "2018-07-11T21:17:25+00:00"
+            "time": "2018-07-11T22:02:35+00:00"
         },
         {
             "name": "kerigansolutions/kma-slider-module",
@@ -833,16 +833,16 @@
         },
         {
             "name": "kerigansolutions/kma-social-icons",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-social-icons.git",
-                "reference": "0a8034c520b1ff7f422cfbfacfa422e44b7e5e1a"
+                "reference": "6534afd24096445250b0e05a86aaa473727dbe23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/0a8034c520b1ff7f422cfbfacfa422e44b7e5e1a",
-                "reference": "0a8034c520b1ff7f422cfbfacfa422e44b7e5e1a",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/6534afd24096445250b0e05a86aaa473727dbe23",
+                "reference": "6534afd24096445250b0e05a86aaa473727dbe23",
                 "shasum": ""
             },
             "type": "library",
@@ -862,7 +862,7 @@
                 }
             ],
             "description": "WordPress module to configure social media icons",
-            "time": "2018-07-06T19:12:45+00:00"
+            "time": "2018-06-27T14:54:32+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1938,9 +1938,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kerigansolutions/kma-social-icons": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
