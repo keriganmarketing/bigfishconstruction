@@ -2,6 +2,12 @@
     <div class="portfolio-gallery">
         <div class="row">
             <button
+                @click="getLocation('')"
+                :class="{'btn btn-danger': selectedLocation === '' }"
+            >
+                All
+            </button>
+            <button
                 v-for="location in locations"
                 @click="getLocation(location.slug)"
                 :class="{'btn btn-danger': selectedLocation === location.slug }"
@@ -10,6 +16,12 @@
             </button>
         </div>
         <div class="row">
+            <button
+                @click="getType('')"
+                :class="{'btn btn-danger': selectedType === '' }"
+            >
+                All
+            </button>
             <button
                 v-for="constructionType in constructionTypes"
                 @click="getType(constructionType.slug)"
@@ -78,7 +90,7 @@ export default {
 
 <style>
 .project-list-enter-active, .project-list-leave-active {
-  transition: all 1s;
+  transition: all .4s;
 }
 .project-list-enter, .project-list-leave-to /* .list-leave-active below version 2.1.8 */ {
   opacity: 0;

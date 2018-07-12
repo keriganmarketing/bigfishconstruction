@@ -1,13 +1,5 @@
 @extends('layouts.main')
-@php
-    $projectsHeader = get_field('projects_header');
-    $featureBox1['title'] = get_field('feat_1_headline');
-    $featureBox1['text'] = get_field('feat_1_text');
-    $featureBox1['link'] = get_field('feat_1_link');
-    $featureBox2['title'] = get_field('feat_2_headline');
-    $featureBox2['text'] = get_field('feat_2_text');
-    $featureBox2['link'] = get_field('feat_2_link');
-@endphp
+
 @section('content')
 <kma-slider class="slider-container"></kma-slider>
 <main role="main">
