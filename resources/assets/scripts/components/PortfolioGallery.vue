@@ -1,34 +1,61 @@
 <template>
     <div class="portfolio-gallery">
-        <div class="row">
-            <button
-                @click="getLocation('')"
-                :class="{'btn btn-danger': selectedLocation === '' }"
-            >
-                All
-            </button>
-            <button
+        <div class="row justify-content-center items-center portfolio-filters d-none d-md-flex">
+            <div class="col-auto" >
+                <button 
+                    @click="getLocation('')"
+                    :class="{
+                        'btn btn-primary': selectedLocation === '',
+                        'btn btn-outline-light': selectedLocation !== ''  
+                    }"
+                >
+                    All
+                </button>
+            </div>
+            <div 
+                class="col-auto"
                 v-for="location in locations"
-                @click="getLocation(location.slug)"
-                :class="{'btn btn-danger': selectedLocation === location.slug }"
-            >
-                {{ location.name }}
-            </button>
-        </div>
-        <div class="row">
-            <button
-                @click="getType('')"
-                :class="{'btn btn-danger': selectedType === '' }"
-            >
-                All
-            </button>
-            <button
+                :key="location.index" >
+                <button
+                    @click="getLocation(location.slug)"
+                    :class="{
+                        'btn btn-primary': selectedLocation === location.slug,
+                        'btn btn-outline-light': selectedLocation !== location.slug  
+                    }"
+                >
+                    {{ location.name }}
+                </button>
+            </div>
+            
+            <div class="col-auto" >
+                <div class="separator"></div>
+            </div>
+
+            <div class="col-auto" >
+                <button
+                    @click="getType('')"
+                    :class="{
+                        'btn btn-primary': selectedType === '',
+                        'btn btn-outline-light': selectedType !== ''  
+                    }"
+                >
+                    All
+                </button>
+            </div>
+            <div 
+                class="col-auto" 
                 v-for="constructionType in constructionTypes"
-                @click="getType(constructionType.slug)"
-                :class="{'btn btn-danger': selectedType === constructionType.slug }"
-            >
-                {{ constructionType.name }}
-            </button>
+                :key="constructionType.index">
+                <button
+                    @click="getType(constructionType.slug)"
+                    :class="{
+                        'btn btn-primary': selectedType === constructionType.slug,
+                        'btn btn-outline-light': selectedType !== constructionType.slug  
+                    }"
+                >
+                    {{ constructionType.name }}
+                </button>
+            </div>
         </div>
         <transition-group name="project-list" tag="div" class="row">
             <div v-for="(project, index) in portfolioItems" :key="index" class="col-md-6 col-lg-4">
@@ -37,8 +64,8 @@
                         <img :src="project.photo.sizes.medium" class="card-img-top" :alt="project.name" >
                     </a>
                     <div class="card-body">
-                        <h3>{{ project.name }}</h3>
-                        <p>{{ project.build_location[0].name }}</p>
+                        <h3 class="text-uppercase text-dark">{{ project.name }}</h3>
+                        <p class="text-uppercase text-light">{{ project.build_location[0].name }}</p>
                     </div>
                 </div>
                 <div class="project-button text-center">
@@ -96,4 +123,23 @@ export default {
   opacity: 0;
   transform: translateY(30px);
 }
+.separator {
+    width: 1px;
+    background-color: #999;
+    height: 100%;
+}
+
+.project-tile .card-body {
+    padding: 2rem 1.25rem;
+}
+
+.project-tile h3 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.project-tile p {
+    font-size: 11px;
+}
+
 </style>

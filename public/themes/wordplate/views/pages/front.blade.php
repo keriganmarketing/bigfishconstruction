@@ -17,7 +17,7 @@
 
                             {{ the_content() }}
 
-                            <a href="/about-us/" class="btn btn-outline-primary" >Meet Our Team &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a href="/about-us/" class="btn btn-lg btn-outline-primary" >Meet Our Team &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 
                         </article>
                     </div>
@@ -39,17 +39,32 @@
 </div>
 <div class="container">
     <portfolio-gallery :limit="6" :locations="{{ $locations }}" :construction-types="{{ $types }}"></portfolio-gallery>
+    <div class="section-button text-center">
+        <a class="btn btn-lg btn-outline-primary" href="/project-portfolio/">Project Portfolio &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </div>
 </div>
 <div class="testimonial-section">
 
+    <div class="section-button text-center">
+        <a class="btn btn-lg btn-outline-white" href="/testimonials/">More Testimonials &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </div>
 </div>
 <div class="feature-box-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h3>{{ $featureBox1['title'] }}</h3>
-                {{ $featureBox1['text'] }}
-                <a href="{{ $featureBox1['link'] }}" ></a>
+            <div class="col-md-6 text-white box-container">
+                <div class="feature-box feat-one">
+                    <h3 class="text-uppercase">{{ $featureBox1['title'] }}</h3>
+                    <p>{{ $featureBox1['text'] }}</p>
+                    <a class="btn btn-lg btn-outline-white" href="{{ $featureBox1['link'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 text-white box-container">
+                <div class="feature-box feat-two">
+                    <h3 class="text-uppercase">{{ $featureBox2['title'] }}</h3>
+                    <p>{{ $featureBox2['text'] }}</p>
+                    <a class="btn btn-lg btn-outline-white" href="{{ $featureBox2['link'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
     </div>
