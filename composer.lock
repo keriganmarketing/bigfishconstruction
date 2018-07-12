@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed70c2207bcddb51a3659f4d6eb8d0ca",
+    "content-hash": "5e739d56d61f65e16d4ff047e1245975",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -863,6 +863,39 @@
             ],
             "description": "WordPress module to configure social media icons",
             "time": "2018-07-11T22:04:03+00:00"
+        },
+        {
+            "name": "kerigansolutions/kma-testimonials",
+            "version": "1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kerigansolutions/kma-testimonials.git",
+                "reference": "84d6c678463728ba7604b373141508d94a3571bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-testimonials/zipball/84d6c678463728ba7604b373141508d94a3571bc",
+                "reference": "84d6c678463728ba7604b373141508d94a3571bc",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KeriganSolutions\\KMATestimonials\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daron Adkins",
+                    "email": "daron@kerigan.com"
+                }
+            ],
+            "description": "Simple Testimonials module for wordpress",
+            "time": "2018-07-12T21:30:48+00:00"
         },
         {
             "name": "nesbot/carbon",

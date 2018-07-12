@@ -3,12 +3,15 @@
 declare(strict_types=1);
 
 use KeriganSolutions\KMAPortfolio\Portfolio;
+use KeriganSolutions\KMATestimonials\Testimonial;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
 $portfolio = (new Portfolio())->use();
+$testimonials = (new Testimonial())->use();
 //////////////////////////
+
 /**
  * Registers the `build_location` taxonomy,
  * for use with 'project'.
@@ -292,7 +295,7 @@ function registerFields(){
         'instruction_placement' => 'label',
         'hide_on_screen'        => '',
     ) );
-    
+
     // Image
     acf_add_local_field( array(
         'key'           => 'header_image',
