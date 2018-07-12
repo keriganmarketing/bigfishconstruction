@@ -26,14 +26,18 @@
 
         methods: {
             filterClasses(classes) {
-                let classArray = classes.split(" ");
-                let output = [];
-                classArray.forEach( className => {
-                    if(!className.match("i") && !className.match("(fa)") ){
-                        output.push(className);
-                    }
-                });
-                return output.join(" ");
+                if(classes != ''){
+                    let classArray = classes.split(" ");
+                    let output = [];
+                    classArray.forEach( className => {
+                        if(!className.match("i") && !className.match("(fa)") ){
+                            output.push(className);
+                        }
+                    });
+                    return output.join(" ");
+                }else{
+                    return '';
+                }
             },
 
             toggleSubMenu(navitem){

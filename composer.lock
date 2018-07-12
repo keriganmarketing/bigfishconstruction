@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4386c8eb7c92d4fe5ee092b503255b4",
+    "content-hash": "ed70c2207bcddb51a3659f4d6eb8d0ca",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -833,25 +833,16 @@
         },
         {
             "name": "kerigansolutions/kma-social-icons",
-            "version": "1.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-social-icons.git",
-<<<<<<< HEAD
-                "reference": "6534afd24096445250b0e05a86aaa473727dbe23"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/6534afd24096445250b0e05a86aaa473727dbe23",
-                "reference": "6534afd24096445250b0e05a86aaa473727dbe23",
-=======
                 "reference": "47165f41f3940ecd94f2190682286d07dc4139bf"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/47165f41f3940ecd94f2190682286d07dc4139bf",
                 "reference": "47165f41f3940ecd94f2190682286d07dc4139bf",
->>>>>>> 37570879b485a44240f651e0be142367a14daca4
                 "shasum": ""
             },
             "type": "library",

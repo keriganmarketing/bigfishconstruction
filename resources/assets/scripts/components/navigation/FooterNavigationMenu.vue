@@ -8,21 +8,10 @@
 <script>
     export default {
 
-        data () {
-            return {
-                footerNav: []
-            }
+        props: {
+            footerNav: {}
         },
 
-        created () {
-            axios.get("/wp-json/wp-api-menus/v2/menu-locations/footer-navigation")
-                .then(response => {
-                    response.data.forEach( item => {
-                        item.subMenuOpen = false;
-                        this.footerNav.push(item);
-                    });
-                });
-        }
     }
 </script> 
 <style>

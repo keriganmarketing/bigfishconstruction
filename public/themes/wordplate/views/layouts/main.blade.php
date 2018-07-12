@@ -13,7 +13,7 @@
                 <div role="navigation" class="navbar navbar-expand-xl" >
                     <div class="container d-flex justify-content-between">
                         <div class="main-navigation collapse navbar-collapse flex-grow-0">
-                            <main-menu :main-nav="{{ json_encode(wp_get_nav_menu_items(3)) }}" class="navbar-nav mr-auto"></main-menu>
+                            <main-menu :main-nav="{{ website_menu(3) }}" class="navbar-nav mr-auto"></main-menu>
                         </div>
                         <div class="text-center flex-xl-grow-1" >
                             <a class="logo" href="/">
@@ -24,11 +24,11 @@
                             MENU <i class="fa fa-bars" aria-hidden="true"></i>
                         </button>
                         <div class="main-navigation collapse navbar-collapse flex-grow-0">
-                            <main-menu :main-nav="{{ json_encode(wp_get_nav_menu_items(4)) }}" class="navbar-nav ml-auto"></main-menu>
+                            <main-menu :main-nav="{{ website_menu(4) }}" class="navbar-nav ml-auto"></main-menu>
                         </div>
                     </div>
                     <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer" :class="{ 'open': this.mobileMenuOpen }" >
-                        <mobile-menu :mobile-nav="{{ json_encode(wp_get_nav_menu_items(5)) }}" class="navbar-nav m-auto" ></mobile-menu>
+                        <mobile-menu :mobile-nav="{{ website_menu(5) }}" class="navbar-nav m-auto" ></mobile-menu>
                     </div>
                 </div>
             </header>
