@@ -78,18 +78,20 @@
 
 <script>
 export default {
-    props: ['locations', 'constructionTypes', 'limit'],
+    props: ['locations', 'constructionTypes', 'limit', 'location', 'type'],
+
     data () {
         return {
             portfolioItems: [],
-            selectedLocation: '',
-            selectedType: ''
+            selectedLocation: this.location,
+            selectedType: this.type
         }
     },
 
     created () {
         this.fetch();
     },
+
     methods: {
         fetch() {
             let request = '?1=1';

@@ -198,6 +198,20 @@ main {
             letter-spacing: 2px;
         }
 
+        p {
+            line-height: 1.8em;
+        }
+
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            color: $secondary;
+            
+            &::after {
+                background-color: $secondary;
+            }
+        }
+
         &.front {
             padding-bottom: 1.5rem;
 
@@ -225,8 +239,12 @@ main {
 
             p {
                 padding-right: .4rem;
-                line-height: 1.8em;
             }
+        }
+
+        &.support {
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
         }
     }
 }
@@ -374,10 +392,27 @@ main {
     &.support {
         padding: 1rem;
         background-color: $dark;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            display: block;
+            background-color: rgba(0,0,0,.5);
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
         
         .container {
             display: flex;
             justify-content: flex-start;
+            position: relative;
+            z-index: 2;
         }
     }
 }
@@ -532,7 +567,10 @@ main {
     }
 }
 
+article h2,
 .short-underline {
+    text-transform: uppercase;
+
     &::after {
         content: " ";
         display: block;
@@ -540,6 +578,25 @@ main {
         height: 3px;
         background-color: #FFF;
         margin: 5px 0;
+    }
+}
+
+// Team
+.team-grid {
+    padding: 0;
+    
+    .team-member {
+        margin: .5rem 0;
+    }
+
+    .member-button {
+        margin-top: -2rem;
+        position: relative;
+        margin-bottom: 2rem;
+
+        .btn {
+            background-color: #FFF;
+        }
     }
 }
 
