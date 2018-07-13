@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "095b7bf301516e3dfb0fd3c119b34b39",
+    "content-hash": "8e9cb4f4a45b435812de5973fce669d9",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -833,16 +833,16 @@
         },
         {
             "name": "kerigansolutions/kma-social-icons",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-social-icons.git",
-                "reference": "47165f41f3940ecd94f2190682286d07dc4139bf"
+                "reference": "0a305241adb7c161435dae8c73b40b786c822b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/47165f41f3940ecd94f2190682286d07dc4139bf",
-                "reference": "47165f41f3940ecd94f2190682286d07dc4139bf",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-social-icons/zipball/0a305241adb7c161435dae8c73b40b786c822b8f",
+                "reference": "0a305241adb7c161435dae8c73b40b786c822b8f",
                 "shasum": ""
             },
             "type": "library",
@@ -862,7 +862,7 @@
                 }
             ],
             "description": "WordPress module to configure social media icons",
-            "time": "2018-07-11T22:04:03+00:00"
+            "time": "2018-07-13T16:21:45+00:00"
         },
         {
             "name": "kerigansolutions/kma-team-module",
