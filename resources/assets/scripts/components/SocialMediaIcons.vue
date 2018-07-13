@@ -1,5 +1,5 @@
 <template>
-        <div class="d-flex justify-content-center social-icons">
+        <div>
             <a 
                 v-for="(icon) in socialData"
                 :key="icon.index" 
