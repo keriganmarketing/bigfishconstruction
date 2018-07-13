@@ -8,4 +8,5 @@ Vue.component('mobile-menu', require('./components/navigation/MobileNavigationMe
 Vue.component('social-icons', require('./components/SocialMediaIcons.vue'));
 Vue.component('kma-slider', require('./components/KMASliderModule.vue'));
 Vue.component('portfolio-gallery', require('./components/PortfolioGallery.vue'));
-Vue.component('contact-form', require('./components/ContactForm.vue'))
+Vue.component('contact-form', require('./components/ContactForm.vue'));
+Vue.component('fit-text', require('./components/FitText.vue'));

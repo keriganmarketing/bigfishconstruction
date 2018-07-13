@@ -9,19 +9,19 @@
                 {{ the_post() }}
 
                 <div class="row no-gutters">
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
                         <article class="front">
-                            <header>
-                                <h1 class="example">{{ the_title() }}</h1>
+                            <header class="fittext">
+                                <fit-text :max="3.05">Your Beach Dream</fit-text>
                             </header>
 
                             {{ the_content() }}
 
-                            <a href="/about-us/" class="btn btn-lg btn-outline-primary" >Meet Our Team &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a href="/about-us/" class="btn btn-lg btn-outline-primary mt-3" >Meet Our Team &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 
                         </article>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col">
                     </div>
                 </div>
 
@@ -34,13 +34,15 @@
     </div>
 </main>
 @include('partials.map')
-<div class="projects-header header-image" style="background-image: url('{{ $projectsHeader['url'] }}')">
-    <h2 class="text-center text-uppercase text-white text-outlined">Projects</h2>
-</div>
-<div class="container">
-    <portfolio-gallery :limit="6" :locations="{{ $locations }}" :construction-types="{{ $types }}"></portfolio-gallery>
-    <div class="section-button text-center">
-        <a class="btn btn-lg btn-outline-primary" href="/project-portfolio/">Project Portfolio &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<div class="projects-section">
+    <div class="projects-header header-image" style="background-image: url('{{ $projectsHeader['url'] }}')">
+        <h2 class="text-center text-uppercase text-white text-outlined">Projects</h2>
+    </div>
+    <div class="container">
+        <portfolio-gallery :limit="6" :locations="{{ $locations }}" :construction-types="{{ $types }}"></portfolio-gallery>
+        <div class="section-button text-center">
+            <a class="btn btn-lg btn-outline-primary" href="/project-portfolio/">Project Portfolio &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        </div>
     </div>
 </div>
 <div class="testimonial-section">
