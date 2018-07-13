@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e9cb4f4a45b435812de5973fce669d9",
+    "content-hash": "9c7d0d357c937a4cd522a7ed1cf56d39",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -764,6 +764,39 @@
                 "wordpress"
             ],
             "time": "2018-01-29T14:49:29+00:00"
+        },
+        {
+            "name": "kerigansolutions/kma-contact-info",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kerigansolutions/kma-contact-info.git",
+                "reference": "8b1f048cf52457acdc6b344b1c10af5480e02b65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-contact-info/zipball/8b1f048cf52457acdc6b344b1c10af5480e02b65",
+                "reference": "8b1f048cf52457acdc6b344b1c10af5480e02b65",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KeriganSolutions\\KMAContactInfo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daron Adkins",
+                    "email": "daron@kerigan.com"
+                }
+            ],
+            "description": "A simple contact info module from KMA",
+            "time": "2018-07-13T18:14:54+00:00"
         },
         {
             "name": "kerigansolutions/kma-portfolio-module",
