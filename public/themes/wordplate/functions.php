@@ -5,14 +5,22 @@ declare(strict_types=1);
 use KeriganSolutions\KMAPortfolio\Portfolio;
 use KeriganSolutions\KMATestimonials\Testimonial;
 use KeriganSolutions\KMATeam\Team;
+use KeriganSolutions\KMAContactInfo\ContactInfo;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
-$portfolio = (new Portfolio())->use();
-$testimonials = (new Testimonial())->menuIcon('editor-quote')->use();
-$team = (new Team())->use();
-//////////////////////////
+(new Portfolio())->use();
+(new Testimonial())->menuIcon('editor-quote')->use();
+(new Team())->use();
+(new ContactInfo())->addField([
+    'key' => 'license_number',
+    'label' => 'License Number',
+    'name' => 'license_number',
+    'type' => 'text',
+    'parent' => 'group_contact_info',
+])->use();
+
 
 /**
  * Registers the `build_location` taxonomy,
