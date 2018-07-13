@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 use KeriganSolutions\KMAPortfolio\Portfolio;
 use KeriganSolutions\KMATestimonials\Testimonial;
+use KeriganSolutions\KMATeam\Team;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
 $portfolio = (new Portfolio())->use();
-$testimonials = (new Testimonial())->use();
+$testimonials = (new Testimonial())->menuIcon('editor-quote')->use();
+$team = (new Team())->use();
 //////////////////////////
 
 /**

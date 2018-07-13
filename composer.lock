@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "20f300aa7dd33b84881629922d238ef8",
+    "content-hash": "8e9cb4f4a45b435812de5973fce669d9",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -863,6 +863,39 @@
             ],
             "description": "WordPress module to configure social media icons",
             "time": "2018-07-13T16:21:45+00:00"
+        },
+        {
+            "name": "kerigansolutions/kma-team-module",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kerigansolutions/kma-team-module.git",
+                "reference": "cbd6033fad62aeb4845133f5ea0320fdbd512b57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-team-module/zipball/cbd6033fad62aeb4845133f5ea0320fdbd512b57",
+                "reference": "cbd6033fad62aeb4845133f5ea0320fdbd512b57",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "KeriganSolutions\\KMATeam\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daron Adkins",
+                    "email": "daron@kerigan.com"
+                }
+            ],
+            "description": "A simple team module from KMA",
+            "time": "2018-07-13T15:33:27+00:00"
         },
         {
             "name": "kerigansolutions/kma-testimonials",
