@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use KeriganSolutions\KMATeam\Team;
 use KeriganSolutions\KMAPortfolio\Portfolio;
 use KeriganSolutions\KMATestimonials\Testimonial;
-use KeriganSolutions\KMATeam\Team;
 use KeriganSolutions\KMAContactInfo\ContactInfo;
 
 // Register plugin helpers.
