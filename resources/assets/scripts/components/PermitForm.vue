@@ -1,5 +1,11 @@
 <template>
     <div class="container" style="margin: 80px auto;">
+        <div class="alert alert-danger" role="alert" v-if="hasError">
+            {{ form.errorMessage }}
+        </div>
+        <div class="alert alert-success" role="alert" v-if="success">
+            Here is a success message!
+        </div>
         <form>
             <div class="form-group">
                 <label for="name">Name</label>
@@ -10,6 +16,8 @@
                     placeholder="Enter first and last name"
                     autocomplete="name"
                     v-model="form.name"
+                    :class="{'border border-danger': errorCode === 'name_required'}"
+                    autofocus
                 >
             </div>
             <div class="form-group">
@@ -20,6 +28,7 @@
                     id="email"
                     placeholder="Enter your email address"
                     autocomplete="email"
+                    :class="{'border border-danger': errorCode === 'email_required'}"
                     v-model="form.email"
                 >
             </div>
@@ -129,7 +138,13 @@
                     </label>
                 </div>
             </fieldset>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button
+                type="submit"
+                class="btn btn-primary"
+                @click.prevent="formSubmitted"
+            >
+                Submit
+            </button>
         </form>
     </div>
 </template>
@@ -142,15 +157,31 @@
                 form: new permitForm({
                     name: '',
                     email: '',
-                    maxWidth: 0,
-                    maxDepth: 0,
-                    bedrooms: 0,
-                    bathrooms: 0,
-                    elevator: false,
-                    floodZone: false,
+                    maxWidth: '',
+                    maxDepth: '',
+                    bedrooms: '',
+                    bathrooms: '',
+                    elevator: 'No',
+                    floodZone: 'No',
                     comments: '',
-                    url: '/kerigansolutions/v1/submit-permit-form'
-                })
+                    url: '/wp-json/kerigansolutions/v1/submit-permit-form'
+                }),
+            }
+        },
+        computed: {
+            hasError: function() {
+                return this.form.hasError;
+            },
+            errorCode: function () {
+                return this.form.errorCode;
+            },
+            success: function () {
+                return this.form.success;
+            }
+        },
+        methods: {
+            formSubmitted () {
+                this.form.submit();
             }
         }
     }

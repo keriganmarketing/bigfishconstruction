@@ -11,6 +11,7 @@ use Testing\PermitForm;
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 require('testing/PermitForm.php');
+require('post-types/planning_request.php');
 
 (new Portfolio())->use();
 (new Testimonial())->menuIcon('editor-quote')->use();
@@ -450,7 +451,7 @@ function registerFields(){
 }
 
 function team_shortcode() {
-    $output = 
+    $output =
     '<div class="team-grid">
         <div class="row">';
 
@@ -458,7 +459,7 @@ function team_shortcode() {
     $members = $team->queryTeam();
 
     foreach($members as $member){
-        $output .= 
+        $output .=
         '<div class="col-md-6 col-lg-4">
             <div class="card team-member text-center">
                 <a href="' . $member['link'] . '" >
@@ -477,7 +478,7 @@ function team_shortcode() {
             </div>
         </div>';
     }
-    
+
     $output .= '</div></div>';
 
     return $output;
@@ -496,13 +497,13 @@ function portfolio_shortcode() {
         'types'             => htmlentities(json_encode(get_terms(['taxonomy' => 'construction-type'])), ENT_QUOTES)
     ];
 
-    $output = 
-    '<portfolio-gallery 
-        limit="' . $a['limit'] . '" 
-        :locations="' . $a['locations'] . '" 
-        :construction-types="' . $a['types'] . '" 
-        location="'. $a['selected-location'] .'" 
-        type="'. $a['selected-type'] .'" 
+    $output =
+    '<portfolio-gallery
+        limit="' . $a['limit'] . '"
+        :locations="' . $a['locations'] . '"
+        :construction-types="' . $a['types'] . '"
+        location="'. $a['selected-location'] .'"
+        type="'. $a['selected-type'] .'"
         ></portfolio-gallery>';
 
     return $output;
