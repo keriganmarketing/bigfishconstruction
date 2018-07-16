@@ -1,8 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
-    
 @if (have_posts())
     @while (have_posts())
         {{ the_post() }}
@@ -40,6 +38,6 @@
         </div>
     </main>
 @endif
-    
+
 </main>
 @endsection
