@@ -39,7 +39,7 @@
         <h2 class="text-center text-uppercase text-white text-outlined">Projects</h2>
     </div>
     <div class="container">
-        <portfolio-gallery :limit="6" :locations="{{ $locations }}" :construction-types="{{ $types }}"></portfolio-gallery>
+        <portfolio-gallery :limit="6" :locations="{{ $locations }}" :construction-types="{{ $types }}" type="" location="" ></portfolio-gallery>
         <div class="section-button text-center">
             <a class="btn btn-lg btn-outline-primary" href="/project-portfolio/">Project Portfolio &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>

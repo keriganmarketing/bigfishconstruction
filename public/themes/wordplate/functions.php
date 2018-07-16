@@ -448,3 +448,63 @@ function registerFields(){
         'required'     => 0,
     ) );
 }
+
+function team_shortcode() {
+    $output = 
+    '<div class="team-grid">
+        <div class="row">';
+
+    $team = new Team();
+    $members = $team->queryTeam();
+
+    foreach($members as $member){
+        $output .= 
+        '<div class="col-md-6 col-lg-4">
+            <div class="card team-member text-center">
+                <a href="' . $member['link'] . '" >
+                    <img src="' . $member['image']['sizes']['medium'] . '" class="card-img-top" alt="' . $member['name'] . '" >
+                </a>
+                <div class="card-body">
+                    <h3 class="text-uppercase text-dark">' . $member['name'] . '</h3>
+                    <p class="text-uppercase text-light">' . $member['title'] . '</p>
+                    <p class="text-uppercase text-light">
+                    <a href="mailto:' . $member['email'] . '" >' . $member['email'] . '</a><br>
+                    <a href="tel:' . $member['phone'] . '" >' . $member['phone'] . '</p>
+                </div>
+            </div>
+            <div class="member-button text-center">
+                <a href="' . $member['link'] . '" class="btn btn-outline-light" >View Bio</a>
+            </div>
+        </div>';
+    }
+    
+    $output .= '</div></div>';
+
+    return $output;
+}
+add_shortcode( 'team', 'team_shortcode' );
+
+function portfolio_shortcode() {
+    $locations = json_encode(get_terms(['taxonomy' => 'build-location']));
+    $types = get_terms(['taxonomy' => 'construction-type']);
+
+    $a = [
+        'selected-location' => (isset($_GET['location']) ? $_GET['location'] : ''),
+        'selected-type'     => (isset($_GET['type']) ? $_GET['type'] : ''),
+        'limit'             => (isset($_GET['limit']) ? $_GET['limit'] : ''),
+        'locations'         => htmlentities(json_encode(get_terms(['taxonomy' => 'build-location'])), ENT_QUOTES),
+        'types'             => htmlentities(json_encode(get_terms(['taxonomy' => 'construction-type'])), ENT_QUOTES)
+    ];
+
+    $output = 
+    '<portfolio-gallery 
+        limit="' . $a['limit'] . '" 
+        :locations="' . $a['locations'] . '" 
+        :construction-types="' . $a['types'] . '" 
+        location="'. $a['selected-location'] .'" 
+        type="'. $a['selected-type'] .'" 
+        ></portfolio-gallery>';
+
+    return $output;
+}
+add_shortcode( 'kma_portfolio', 'portfolio_shortcode' );
