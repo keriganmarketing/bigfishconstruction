@@ -1,4 +1,5 @@
 import axios from 'axios';
+import alertify from 'alertifyjs';
 
 export default class ContactForm {
 
@@ -19,10 +20,13 @@ export default class ContactForm {
         }).then(() => {
             this.success = true;
             this.clearForm();
+            alertify.success('Thanks! We\'ll get back with you as soon as possible!');
+
         }).catch(err => {
             this.hasError     = true;
             this.errorMessage = err.response.data.message;
             this.errorCode    = err.response.data.code;
+            alertify.error(this.errorMessage);
         });
     }
     clearForm() {
