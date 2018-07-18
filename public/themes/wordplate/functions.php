@@ -7,11 +7,14 @@ use KeriganSolutions\KMAPortfolio\Portfolio;
 use KeriganSolutions\KMATestimonials\Testimonial;
 use KeriganSolutions\KMAContactInfo\ContactInfo;
 use Testing\PermitForm;
+use Testing\ContactForm;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 require('testing/PermitForm.php');
+require('testing/ContactForm.php');
 require('post-types/planning_request.php');
+require('post-types/contact_request.php');
 
 (new Portfolio())->use();
 (new Testimonial())->menuIcon('editor-quote')->use();
@@ -24,6 +27,7 @@ require('post-types/planning_request.php');
     'parent' => 'group_contact_info',
 ])->use();
 new PermitForm();
+new ContactForm();
 
 
 /**
