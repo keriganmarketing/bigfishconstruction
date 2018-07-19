@@ -13,7 +13,9 @@
                         <h1>{{ the_title() }}</h1>
                     </header>
                     {{ the_content() }}
-                    <pre>{{ print_r($project) }}</pre>
+                    
+                    <photo-gallery :data-photos='{{ json_encode($project['gallery']) }}' ></photo-gallery>
+
                 </article>
             </div>
         </main>

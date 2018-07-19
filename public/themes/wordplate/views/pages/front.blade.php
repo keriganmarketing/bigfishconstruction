@@ -64,14 +64,14 @@
                         <div class="feature-box feat-one">
                             <h3 class="text-uppercase">{{ $featureBox1['title'] }}</h3>
                             <p>{{ $featureBox1['text'] }}</p>
-                            <a class="btn btn-lg btn-outline-white" href="{{ $featureBox1['link'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a class="btn btn-lg btn-outline-white" href="{{ $featureBox1['link']['url'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 text-white box-container">
                         <div class="feature-box feat-two">
                             <h3 class="text-uppercase">{{ $featureBox2['title'] }}</h3>
                             <p>{{ $featureBox2['text'] }}</p>
-                            <a class="btn btn-lg btn-outline-white" href="{{ $featureBox2['link'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a class="btn btn-lg btn-outline-white" href="{{ $featureBox2['link']['url'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
