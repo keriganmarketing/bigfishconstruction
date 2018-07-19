@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+@include('partials.mast')
 <main role="main">
     <div class="container">
         @if (have_posts())
@@ -10,9 +11,7 @@
 
             @endwhile
         @else
-            <article>
-                <p>Nothing to see.</p>
-            </article>
+            @include('pages.404')
         @endif
     </div>
 </main>

@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="margin: 80px auto;">
+    <div style="margin: 80px auto;">
         <div class="alert alert-danger" role="alert" v-if="hasError && !success">
             {{ form.errorMessage }}
         </div>
