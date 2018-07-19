@@ -11,3 +11,4 @@ Vue.component('portfolio-gallery', require('./components/PortfolioGallery.vue'))
 Vue.component('contact-form', require('./components/ContactForm.vue'));
 Vue.component('fit-text', require('./components/FitText.vue'));
 Vue.component('permit-form', require('./components/PermitForm.vue'));
+Vue.component('photo-gallery', require('./components/PhotoGallery.vue'));
