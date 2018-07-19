@@ -15,6 +15,8 @@ require('testing/PermitForm.php');
 require('testing/ContactForm.php');
 require('post-types/planning_request.php');
 require('post-types/contact_request.php');
+require('testing/KMAMail.php');
+
 
 (new Portfolio())->use();
 (new Testimonial())->menuIcon('editor-quote')->use();
@@ -526,7 +528,7 @@ function testimonial_shortcode( $atts ) {
     $list = $testimonials->queryTestimonials($a['featured'], $a['limit'], $a['orderby'], $a['order']);
 
     $output = '<div class="testimonials" >';
-    foreach ($list as $item) { 
+    foreach ($list as $item) {
         $output .= '
         <div class="testimonial list" id="' . $item->ID . '" >
             <p class="testimonial-date" >' . get_the_date('', $item) . '</p>
