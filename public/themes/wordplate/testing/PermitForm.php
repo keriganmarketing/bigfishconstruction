@@ -6,6 +6,17 @@ use \WP_REST_Request;
 
 class PermitForm
 {
+
+    public $name;
+    public $email;
+    public $maxWidth;
+    public $maxDepth;
+    public $bedrooms;
+    public $bathrooms;
+    public $elevator;
+    public $floodZone;
+    public $comments;
+
     public function __construct()
     {
         add_action('rest_api_init', [$this, 'registerRoutes']);
@@ -46,13 +57,12 @@ class PermitForm
         $id = wp_insert_post($defaults);
 
         foreach ($request->get_params() as $param => $value) {
+            $this[$param] = $value;
             if ($param !== 'name') {
                 update_post_meta($id, $param, $value);
             }
         }
-        ////////////////////////////
-        // TODO: Send email here //
-        //////////////////////////
+
         return rest_ensure_response(json_encode(['message' => 'Success']));
     }
 
