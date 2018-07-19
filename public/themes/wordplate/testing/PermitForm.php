@@ -50,11 +50,9 @@ class PermitForm
                 update_post_meta($id, $param, $value);
             }
         }
-
         ////////////////////////////
-        /* TODO: Send email here */
+        // TODO: Send email here //
         //////////////////////////
-
         return rest_ensure_response(json_encode(['message' => 'Success']));
     }
 
