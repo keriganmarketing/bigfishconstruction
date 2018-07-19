@@ -50,9 +50,13 @@ class PermitForm
                 update_post_meta($id, $param, $value);
             }
         }
-        ////////////////////////////
-        // TODO: Send email here //
-        //////////////////////////
+
+        $headers  = 'MIME-Version: 1.0' . PHP_EOL;
+        $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
+        
+        $message = new KMAMail('Big Fish Construction', 'test', 'https://bigfishconstruction.test');
+        wp_mail('bryan@kerigan.com', 'TEST', $message->formatted(), $headers);
+        
         return rest_ensure_response(json_encode(['message' => 'Success']));
     }
 
