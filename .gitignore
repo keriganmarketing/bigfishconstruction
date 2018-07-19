@@ -8,3 +8,4 @@ node_modules
 npm-debug.log
 Vagrantfile
 vendor
+public/themes/wordplate/assets/mix-manifest.json
