@@ -1,5 +1,9 @@
 <?php
 
+use KeriganSolutions\KMATestimonials\Testimonial;
+$testimonials = new Testimonial;
+$featuredTestimonial = $testimonials->queryTestimonials(true, 1, 'date', 'DESC', 115);
+
 bladerunner('views.pages.front', [
     'locations' => json_encode(get_terms([
         'taxonomy' => 'build-location',
@@ -17,5 +21,6 @@ bladerunner('views.pages.front', [
         'text' => get_field('feat_2_text'),
         'link' => get_field('feat_2_link')
     ],
-    'projectsHeader' => get_field('projects_header')
+    'projectsHeader' => get_field('projects_header'),
+    'featuredTestimonial' => $featuredTestimonial
 ]);

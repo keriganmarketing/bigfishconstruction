@@ -600,6 +600,42 @@ article h2,
     }
 }
 
+// Testimonials
+.testimonials {
+    .testimonial {
+        padding-top: 2.75rem;
+
+        &.list {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $light;
+        }
+
+        &:last-child {
+            border: none;
+        }
+
+        &.single .author,
+        .testimonial-date {
+            color: $light;
+            text-transform: uppercase;
+        }
+
+        &.single {
+            padding-top: 3.5rem;
+
+            p {
+                font-weight: 600;
+                line-height: 1.8em;
+            }
+            .author {
+                padding: 1.5rem 0 1rem;
+                font-size: .9em;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
 // Footer
 footer {
     color: #FFF;

@@ -518,10 +518,25 @@ function testimonial_shortcode( $atts ) {
     $a = shortcode_atts( [
         'limit'    => -1,
         'featured' => false,
+        'order'    => 'ASC',
+        'orderby'  => 'menu_order'
     ], $atts );
 
-    
+    $testimonials = new Testimonial;
+    $list = $testimonials->queryTestimonials($a['featured'], $a['limit'], $a['orderby'], $a['order']);
 
+    $output = '<div class="testimonials" >';
+    foreach ($list as $item) { 
+        $output .= '
+        <div class="testimonial list" id="' . $item->ID . '" >
+            <p class="testimonial-date" >' . get_the_date('', $item) . '</p>
+            ' . apply_filters('the_content', $item->post_content) . '
+            <p class="author" >' . $item->byline . '</p>
+        </div>
+        ';
+    }
+    $output .= '</div>';
 
+    return $output;
 }
 add_shortcode( 'kma_testimonials', 'testimonial_shortcode' );
