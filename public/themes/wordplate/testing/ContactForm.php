@@ -59,7 +59,6 @@ class ContactForm
         if ($email === null) {
             return new \WP_Error('email_required', 'The email field is required', ['status' => 422]);
         }
-
         if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return new \WP_Error('invalid_email', 'The email address you entered is invalid', ['status' => 422]);
         }
