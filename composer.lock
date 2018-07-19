@@ -932,16 +932,16 @@
         },
         {
             "name": "kerigansolutions/kma-testimonials",
-            "version": "1.6",
+            "version": "1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kerigansolutions/kma-testimonials.git",
-                "reference": "84d6c678463728ba7604b373141508d94a3571bc"
+                "reference": "b0a7bb1d524393a714941c602dd29d78707489ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kerigansolutions/kma-testimonials/zipball/84d6c678463728ba7604b373141508d94a3571bc",
-                "reference": "84d6c678463728ba7604b373141508d94a3571bc",
+                "url": "https://api.github.com/repos/kerigansolutions/kma-testimonials/zipball/b0a7bb1d524393a714941c602dd29d78707489ae",
+                "reference": "b0a7bb1d524393a714941c602dd29d78707489ae",
                 "shasum": ""
             },
             "type": "library",
@@ -961,7 +961,7 @@
                 }
             ],
             "description": "Simple Testimonials module for wordpress",
-            "time": "2018-07-12T21:30:48+00:00"
+            "time": "2018-07-19T15:13:57+00:00"
         },
         {
             "name": "nesbot/carbon",
