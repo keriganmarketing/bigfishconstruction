@@ -513,3 +513,15 @@ function portfolio_shortcode() {
     return $output;
 }
 add_shortcode( 'kma_portfolio', 'portfolio_shortcode' );
+
+function testimonial_shortcode( $atts ) {
+    $a = shortcode_atts( [
+        'limit'    => -1,
+        'featured' => false,
+    ], $atts );
+
+    
+
+
+}
+add_shortcode( 'kma_testimonials', 'testimonial_shortcode' );
