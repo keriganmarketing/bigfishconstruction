@@ -4,11 +4,7 @@
 @if (have_posts())
     @while (have_posts())
         {{ the_post() }}
-        <div class="projects-header header-image support" style="{{ $headerImageData != '' ? 'background-image: url(' . $headerImageData['url'] . ')' : '' }}">
-            <div class="container d-none d-xl-block">
-                <h1 class="text-center text-uppercase text-white text-outlined">{{ $headline != '' ? $headline : the_title() }}</h1>
-            </div>
-        </div>
+        @include('partials.mast')
         <main role="main">
             <div class="container">
                 <article class="support">
