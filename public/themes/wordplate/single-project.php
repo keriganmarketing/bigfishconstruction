@@ -8,5 +8,7 @@ bladerunner('views.pages.project', [
         'link'    => get_permalink($post->ID),
         'build_location' => get_the_terms($post->ID, 'build-location'),
         'construciton_type' => get_the_terms($post->ID, 'construction-type')
-    ]
+    ],
+    'headerImageData' => get_field('header_image'),
+    'headline'        => get_field('headline')
 ]);
