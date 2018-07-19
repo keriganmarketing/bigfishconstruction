@@ -29,12 +29,13 @@ class PermitForm
     {
         $name = $request->get_param('name') != '' ? $request->get_param('name') : null;
         $email = $request->get_param('email') !== '' ? $request->get_param('email') : null;
-        if ($name === null) {
-            return new \WP_Error('name_required', 'The name field is required', array('status' => 422));
+
+        $error = $this->validate($name, $email);
+
+        if ($error) {
+            return $error;
         }
-        if ($email === null) {
-            return new \WP_Error('email_required', 'The email field is required', array('status' => 422));
-        }
+
         $defaults = array(
             'post_title' => $name,
             'post_type' => 'planning_request',
@@ -55,5 +56,21 @@ class PermitForm
         //////////////////////////
 
         return rest_ensure_response(json_encode(['message' => 'Success']));
+    }
+
+    public function validate($name, $email)
+    {
+        if ($name === null) {
+            return new \WP_Error('name_required', 'The name field is required', ['status' => 422]);
+        }
+        if ($email === null) {
+            return new \WP_Error('email_required', 'The email field is required', ['status' => 422]);
+        }
+
+        if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return new \WP_Error('invalid_email', 'The email address you entered is invalid', ['status' => 422]);
+        }
+
+        return false;
     }
 }
