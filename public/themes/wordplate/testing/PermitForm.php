@@ -92,16 +92,35 @@ class PermitForm
         $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
 
         $message = new Message();
-        $message->setHeadline('Here is the headline!')
-                ->setBody('Here is the body of the message')
-                ->to('daron@kerigan.com')
+        $message->setHeadline('New Permit Request')
+                ->setBody($this->messageBody())
+                ->to('bryan@kerigan.com')
                 ->setHeaders($headers)
-                ->setSubject('This is a test message!');
+                ->setSubject('New Permit Request')
+                ->setPrimaryColor('#b73838')
+                ->setSecondaryColor('#d74f0b');
 
         $mail = new KMAMail($message);
         $mail->send();
     }
 
+    public function messageBody()
+    {
+        return '
+        <p>You\'ve received a new Plans & Permitting request.</p>
+        <table cellspacing="0" cellpadding="0" border="0" class="datatable">
+            <tr><td>Name</td><td>' . $this->name . '</td></tr>
+            <tr><td>Email</td><td>' . $this->email . '</td></tr>
+            <tr><td>Max Buildable Width</td><td>' . $this->maxWidth . '</td></tr>
+            <tr><td>Max Buildable Depth</td><td>' . $this->maxDepth . '</td></tr>
+            <tr><td>Number of Bedrooms</td><td>' . $this->bedrooms . '</td></tr>
+            <tr><td>Number of Bathrooms</td><td>' . $this->bathrooms . '</td></tr>
+            <tr><td>Elevator</td><td>' . $this->elevator . '</td></tr>
+            <tr><td>Flood Zone</td><td>' . $this->floodZone . '</td></tr>
+            <tr><td>AdditionalInformation</td><td>' . $this->comments  . '</td></tr>
+        </table>
+        ';
+    }
 
     public function validate($name, $email)
     {
