@@ -3,6 +3,8 @@
 namespace Testing;
 
 use \WP_REST_Request;
+use KeriganSolutions\KMAMail\Message;
+use KeriganSolutions\KMAMail\KMAMail;
 
 class PermitForm
 {
@@ -16,6 +18,8 @@ class PermitForm
     public $elevator;
     public $floodZone;
     public $comments;
+    public $request;
+    public $error;
 
     public function __construct()
     {
@@ -36,35 +40,68 @@ class PermitForm
         );
     }
 
-    public function submitPermitForm(WP_REST_Request $request)
+    public function checkForErrors()
     {
-        $name = $request->get_param('name') != '' ? $request->get_param('name') : null;
-        $email = $request->get_param('email') !== '' ? $request->get_param('email') : null;
+        $name = $this->request->get_param('name') != '' ? $this->request->get_param('name') : null;
+        $email = $this->request->get_param('email') !== '' ? $this->request->get_param('email') : null;
 
-        $error = $this->validate($name, $email);
+        $this->error = $this->validate($name, $email);
+    }
 
-        if ($error) {
-            return $error;
-        }
-
+    public function createPost()
+    {
         $defaults = array(
-            'post_title' => $name,
+            'post_title' => $this->name,
             'post_type' => 'planning_request',
             'menu_order' => 0,
             'post_status' => 'publish'
         );
 
-        $id = wp_insert_post($defaults);
+        return wp_insert_post($defaults);
+    }
 
-        foreach ($request->get_params() as $param => $value) {
-            $this[$param] = $value;
+    public function persistToDashboard()
+    {
+        $id = $this->createPost();
+
+        foreach ($this->request->get_params() as $param => $value) {
+            $this->$param = $value;
             if ($param !== 'name') {
                 update_post_meta($id, $param, $value);
             }
         }
 
+    }
+
+    public function submitPermitForm(WP_REST_Request $request)
+    {
+        $this->request = $request;
+        $this->checkForErrors();
+        if ($this->error) {
+            return $this->error;
+        }
+        $this->persistToDashboard();
+        $this->sendEmail();
+
         return rest_ensure_response(json_encode(['message' => 'Success']));
     }
+
+    public function sendEmail()
+    {
+        $headers  = 'MIME-Version: 1.0' . PHP_EOL;
+        $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
+
+        $message = new Message();
+        $message->setHeadline('Here is the headline!')
+                ->setBody('Here is the body of the message')
+                ->to('daron@kerigan.com')
+                ->setHeaders($headers)
+                ->setSubject('This is a test message!');
+
+        $mail = new KMAMail($message);
+        $mail->send();
+    }
+
 
     public function validate($name, $email)
     {
@@ -78,6 +115,9 @@ class PermitForm
         if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return new \WP_Error('invalid_email', 'The email address you entered is invalid', ['status' => 422]);
         }
+
+        $this->name = $name;
+        $this->email = $email;
 
         return false;
     }

@@ -8,6 +8,7 @@ use KeriganSolutions\KMATestimonials\Testimonial;
 use KeriganSolutions\KMAContactInfo\ContactInfo;
 use Testing\PermitForm;
 use Testing\ContactForm;
+use Testing\KMAMail;
 
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
@@ -15,7 +16,8 @@ require('testing/PermitForm.php');
 require('testing/ContactForm.php');
 require('post-types/planning_request.php');
 require('post-types/contact_request.php');
-require('testing/KMAMail.php');
+require('testing/KMAMail/KMAMail.php');
+require('testing/KMAMail/Message.php');
 
 
 (new Portfolio())->use();
