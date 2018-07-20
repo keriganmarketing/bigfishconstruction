@@ -6,6 +6,10 @@ class KMAMail
     public $message;
     public $companyName;
     public $url;
+    public $primaryColor;
+    public $secondaryColor;
+    public $logo;
+    public $headline;
 
     public function __construct(Message $message)
     {
@@ -30,7 +34,20 @@ class KMAMail
     <title>{$this->companyName}</title>
     <style type="text/css">
     body, html {
-    width: 100% !important; height: 100%; margin: 0; line-height: 1.4; background-color: #F2F4F6; color: #74787E; -webkit-text-size-adjust: none;
+      width: 100% !important; 
+      height: 100%; 
+      margin: 0; 
+      line-height: 1.4; 
+      background-color: #F2F4F6; 
+      color: #74787E; 
+      -webkit-text-size-adjust: none;
+    }
+    .datatable {
+      width: 100% !important;
+    }
+    .datatable td {
+      border: 1px solid #FFF !important;
+      padding: 3px 5px !important;
     }
     @media only screen and (max-width: 600px) {
       .content-cell,
@@ -38,6 +55,7 @@ class KMAMail
       .email-footer {
         width: 100% !important;
       }
+
     }
     @media only screen and (max-width: 500px) {
       .button {
