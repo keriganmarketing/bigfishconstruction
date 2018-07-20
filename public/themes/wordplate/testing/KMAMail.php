@@ -6,12 +6,19 @@ class KMAMail
     public $message;
     public $companyName;
     public $url;
+    public $primaryColor;
+    public $secondaryColor;
+    public $logo;
+    public $headline;
 
     public function __construct($companyName, $message, $url)
     {
-        $this->url         = $url;
-        $this->message     = $message;
-        $this->companyName = $companyName;
+        $this->url             = WP_HOME;
+        $this->message         = $message;
+        $this->companyName     = get_bloginfo();
+        $this->primaryColor   = '#a43535';
+        $this->secondaryColor = '#d54f1d';
+        $this->headline       = 'Thank you!';
     }
 
     public function formatted()
@@ -23,27 +30,25 @@ class KMAMail
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>{$this->companyName}</title>
-
-
+    <style type="text/css">
+    body, html {
+    width: 100% !important; height: 100%; margin: 0; line-height: 1.4; background-color: #F2F4F6; color: #74787E; -webkit-text-size-adjust: none;
+    }
+    @media only screen and (max-width: 600px) {
+      .content-cell,
+      .email-body_inner,
+      .email-footer {
+        width: 100% !important;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+      .button {
+        width: 100% !important;
+      }
+    }
+    </style>
   </head>
-  <body style="-webkit-text-size-adjust: none; box-sizing: border-box; color: #74787E; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; height: 100%; line-height: 1.4; margin: 0; width: 100% !important;" bgcolor="#F2F4F6"><style type="text/css">
-body {
-width: 100% !important; height: 100%; margin: 0; line-height: 1.4; background-color: #F2F4F6; color: #74787E; -webkit-text-size-adjust: none;
-}
-@media only screen and (max-width: 600px) {
-  .email-body_inner {
-    width: 100% !important;
-  }
-  .email-footer {
-    width: 100% !important;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .button {
-    width: 100% !important;
-  }
-}
-</style>
+  <body style="-webkit-text-size-adjust: none; box-sizing: border-box; color: #74787E; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; height: 100%; line-height: 1.4; margin: 0; width: 100% !important;" bgcolor="#F2F4F6">
     <span class="preheader" style="box-sizing: border-box; display: none !important; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 1px; line-height: 1px; max-height: 0; max-width: 0; mso-hide: all; opacity: 0; overflow: hidden; visibility: hidden;">Thanks for contacting {$this->companyName}. We’ve received your request and will get back to you soon!</span>
     <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0; padding: 0; width: 100%;" bgcolor="#F2F4F6">
       <tr>
@@ -57,11 +62,11 @@ width: 100% !important; height: 100%; margin: 0; line-height: 1.4; background-co
               </td>
             </tr>
             <tr>
-              <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; border-bottom-color: #EDEFF2; border-bottom-style: solid; border-bottom-width: 1px; border-top-color: #EDEFF2; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" bgcolor="#FFFFFF">
-                <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0 auto; padding: 0; width: 570px;" bgcolor="#FFFFFF">
+              <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" >
+                <table class="email-body_inner" align="center" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0 auto; padding: 0; " bgcolor="#FFFFFF">
                   <tr>
-                    <td class="content-cell" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; padding: 35px; word-break: break-word;">
-                      <h1 style="box-sizing: border-box; color: #2F3133; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; font-weight: bold; margin-top: 0;" align="left">Thank you for contacting us!</h1>
+                    <td class="content-cell" style="width:550px; box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; padding: 35px; word-break: break-word; border-top: 4px solid {$this->primaryColor}; border-bottom: 4px solid {$this->secondaryColor};">
+                      <h1 style="box-sizing: border-box; color: #2F3133; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; font-weight: bold; margin-top: 0;" align="left">{$this->headline}</h1>
                       <p style="box-sizing: border-box; color: #74787E; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">{$this->message}</p>
                   </tr>
                 </table>
@@ -69,13 +74,10 @@ width: 100% !important; height: 100%; margin: 0; line-height: 1.4; background-co
             </tr>
             <tr>
               <td style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; word-break: break-word;">
-                <table class="email-footer" align="center" width="570" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0 auto; padding: 0; text-align: center; width: 570px;">
+                <table class="email-footer" align="center" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0 auto; padding: 0; text-align: center; ">
                   <tr>
                     <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; padding: 35px; word-break: break-word;">
-                      <p class="sub align-center" style="box-sizing: border-box; color: #AEAEAE; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">© 2018 {$this->companyName}. All rights reserved.</p>
-                      <p class="sub align-center" style="box-sizing: border-box; color: #AEAEAE; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; line-height: 1.5em; margin-top: 0;" align="center">
-                      {$this->companyName}
-                      </p>
+                      <p class="sub align-center" style="box-sizing: border-box; color: #AEAEAE; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; line-height: 1.25em; margin-top: 0;" align="center">&copy2018 {$this->companyName}. All rights reserved.</p>
                     </td>
                   </tr>
                 </table>
