@@ -94,7 +94,7 @@ class PermitForm
         $message = new Message();
         $message->setHeadline('Here is the headline!')
                 ->setBody('Here is the body of the message')
-                ->to('daron@kerigan.com')
+                ->to('daron@kerigan.com') // add more fields (eg. CC, BCC, multiple to block)
                 ->setHeaders($headers)
                 ->setSubject('This is a test message!');
 
