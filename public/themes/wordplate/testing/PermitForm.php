@@ -94,7 +94,7 @@ class PermitForm
         $message = new Message();
         $message->setHeadline('New Permit Request')
                 ->setBody($this->messageBody())
-                ->to('bryan@kerigan.com')
+                ->to($this->email)
                 ->setHeaders($headers)
                 ->setSubject('New Permit Request')
                 ->setPrimaryColor('#b73838')
@@ -130,8 +130,8 @@ class PermitForm
         if ($email === null) {
             return new \WP_Error('email_required', 'The email field is required', ['status' => 422]);
         }
-
         if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            // invalid email given
             return new \WP_Error('invalid_email', 'The email address you entered is invalid', ['status' => 422]);
         }
 

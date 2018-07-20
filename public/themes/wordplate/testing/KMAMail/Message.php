@@ -51,6 +51,7 @@ class Message
 
         return $this;
     }
+
     public function setBody(string $body)
     {
         $this->body = $body;
