@@ -4,7 +4,7 @@
             {{ form.errorMessage }}
         </div>
         <div class="alert alert-success" role="alert" v-if="success && !hasError">
-            Here is a success message!
+            Thank you for submitting a Plans & Permitting request. We'll review the details and get back with you as soon as we can.
         </div>
         <form>
             <div class="row">
