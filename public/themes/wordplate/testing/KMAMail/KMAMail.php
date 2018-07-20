@@ -1,5 +1,5 @@
 <?php
-namespace Testing;
+namespace KeriganSolutions\KMAMail;
 
 class KMAMail
 {
@@ -11,17 +11,19 @@ class KMAMail
     public $logo;
     public $headline;
 
-    public function __construct($companyName, $message, $url)
+    public function __construct(Message $message)
     {
-        $this->url             = WP_HOME;
-        $this->message         = $message;
-        $this->companyName     = get_bloginfo();
-        $this->primaryColor   = '#a43535';
-        $this->secondaryColor = '#d54f1d';
-        $this->headline       = 'Thank you!';
+        $this->message     = $message;
+        $this->companyName = get_bloginfo();
+        $this->url         = WP_SITEURL;
     }
 
-    public function formatted()
+    public function send()
+    {
+        wp_mail($this->message->to, $this->message->subject, $this->formattedEmail(), $this->message->headers);
+    }
+
+    public function formattedEmail()
     {
         return <<< EOD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -65,9 +67,9 @@ class KMAMail
               <td class="email-body" width="100%" cellpadding="0" cellspacing="0" style="-premailer-cellpadding: 0; -premailer-cellspacing: 0; box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0; padding: 0; width: 100%; word-break: break-word;" >
                 <table class="email-body_inner" align="center" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0 auto; padding: 0; " bgcolor="#FFFFFF">
                   <tr>
-                    <td class="content-cell" style="width:550px; box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; padding: 35px; word-break: break-word; border-top: 4px solid {$this->primaryColor}; border-bottom: 4px solid {$this->secondaryColor};">
-                      <h1 style="box-sizing: border-box; color: #2F3133; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; font-weight: bold; margin-top: 0;" align="left">{$this->headline}</h1>
-                      <p style="box-sizing: border-box; color: #74787E; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">{$this->message}</p>
+                    <td class="content-cell" style="width:550px; box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; padding: 35px; word-break: break-word; border-top: 4px solid {$this->message->primaryColor}; border-bottom: 4px solid {$this->message->secondaryColor}">
+                      <h1 style="box-sizing: border-box; color: #2F3133; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 19px; font-weight: bold; margin-top: 0;" align="left">{$this->message->headline}</h1>
+                      <p style="box-sizing: border-box; color: #74787E; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; line-height: 1.5em; margin-top: 0;" align="left">{$this->message->body}</p>
                   </tr>
                 </table>
               </td>
@@ -77,7 +79,7 @@ class KMAMail
                 <table class="email-footer" align="center" cellpadding="0" cellspacing="0" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; margin: 0 auto; padding: 0; text-align: center; ">
                   <tr>
                     <td class="content-cell" align="center" style="box-sizing: border-box; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; padding: 35px; word-break: break-word;">
-                      <p class="sub align-center" style="box-sizing: border-box; color: #AEAEAE; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; line-height: 1.25em; margin-top: 0;" align="center">&copy2018 {$this->companyName}. All rights reserved.</p>
+                      <p class="sub align-center" style="box-sizing: border-box; color: #AEAEAE; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; line-height: 1.25em; margin-top: 0;" align="center">&copy; 2018 {$this->companyName}. All rights reserved.</p>
                     </td>
                   </tr>
                 </table>
