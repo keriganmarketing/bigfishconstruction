@@ -9,9 +9,9 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="footer-content">
                     <h4 class="short-underline">Port St. Joe Office</h4>
-                    <p><a href="tel:850-229-6400">850-229-6400</a></p>
-                    <p>346 Commerce Blvd.<br>
-                    Port St. Joe, FL. 32456</p>
+                    <p><a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a> <em>phone</em></p>
+                    <p><a href="tel:{{ get_field('fax', 'option') }}">{{ get_field('fax', 'option') }}</a> <em>fax</em></p>
+                    <p>{!! nl2br(get_field('address', 'option')) !!}</p>
                     <h4 class="short-underline">Connect</h4>
                     <social-icons :size="37" :margin=".25" class="d-flex social-icons" ></social-icons>
                 </div>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <hr>
-    <p class="copyright text-center">State Certified Building Contractor – CGC152946</p>
+    <p class="copyright text-center">State Certified Building Contractor – {{ get_field('license_number', 'option') }}</p>
     <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}. All Rights&nbsp;Reserved. 
         <a style="text-decoration:underline;" href="/privacy-policy" >Privacy&nbsp;Policy</a> 
         <span class="siteby">
