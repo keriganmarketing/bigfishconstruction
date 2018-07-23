@@ -3,3 +3,4 @@ plugins/*
 !plugins/index.php
 upgrade
 wordpress
+*.cache/*

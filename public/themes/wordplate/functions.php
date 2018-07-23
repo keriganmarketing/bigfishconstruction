@@ -231,7 +231,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('wordplate', mix('styles/main.css'));
 
     wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
-    wp_enqueue_script('wordplate');
+    wp_enqueue_script('wordplate', mix('scripts/app.js'), '', '', true);
 });
 
 
