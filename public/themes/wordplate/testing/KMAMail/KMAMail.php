@@ -34,12 +34,12 @@ class KMAMail
     <title>{$this->companyName}</title>
     <style type="text/css">
     body, html {
-      width: 100% !important; 
-      height: 100%; 
-      margin: 0; 
-      line-height: 1.4; 
-      background-color: #F2F4F6; 
-      color: #74787E; 
+      width: 100% !important;
+      height: 100%;
+      margin: 0;
+      line-height: 1.4;
+      background-color: #F2F4F6;
+      color: #74787E;
       -webkit-text-size-adjust: none;
     }
     .datatable {
