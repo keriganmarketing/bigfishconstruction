@@ -6,16 +6,14 @@ class KMAMail
     public $message;
     public $companyName;
     public $url;
-    public $primaryColor;
-    public $secondaryColor;
     public $logo;
     public $headline;
 
     public function __construct(Message $message)
     {
+        $this->url         = WP_SITEURL;
         $this->message     = $message;
         $this->companyName = get_bloginfo();
-        $this->url         = WP_SITEURL;
     }
 
     public function send()

@@ -42,7 +42,7 @@ class PermitForm
 
     public function checkForErrors()
     {
-        $name = $this->request->get_param('name') != '' ? $this->request->get_param('name') : null;
+        $name  = $this->request->get_param('name') != '' ? $this->request->get_param('name') : null;
         $email = $this->request->get_param('email') !== '' ? $this->request->get_param('email') : null;
 
         $this->error = $this->validate($name, $email);
@@ -94,11 +94,11 @@ class PermitForm
         $message = new Message();
         $message->setHeadline('New Permit Request')
                 ->setBody($this->messageBody())
-                ->to($this->email)
                 ->setHeaders($headers)
                 ->setSubject('New Permit Request')
                 ->setPrimaryColor('#b73838')
-                ->setSecondaryColor('#d74f0b');
+                ->setSecondaryColor('#d74f0b')
+                ->to($this->email);
 
         $mail = new KMAMail($message);
         $mail->send();
