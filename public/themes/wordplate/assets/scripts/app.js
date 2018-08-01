@@ -5719,7 +5719,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -20099,9 +20098,7 @@ var render = function() {
                         src: photo.sizes.medium,
                         alt: photo.title
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(photo.title))])
+                    })
                   ]
                 )
               ]
