@@ -1,5 +1,7 @@
 <?php
 
+$headerImageData = get_field('image');
+
 bladerunner('views.pages.project', [
     'project' => [
         'id' => $post->ID,
@@ -9,6 +11,6 @@ bladerunner('views.pages.project', [
         'build_location' => get_the_terms($post->ID, 'build-location'),
         'construciton_type' => get_the_terms($post->ID, 'construction-type')
     ],
-    'headerImageData' => get_field('header_image'),
+    'headerImage' => $headerImageData['url'],
     'headline'        => get_field('headline')
 ]);
