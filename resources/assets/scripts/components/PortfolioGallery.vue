@@ -89,7 +89,7 @@ export default {
         }, 
         limit: {
             type: Number,
-            default: 0
+            default: -1
         }, 
         location: {
             type: String,
@@ -118,7 +118,7 @@ export default {
             let request = '?1=1';
             request += (this.selectedLocation != '' ? '&build-location=' + this.selectedLocation : '' );
             request += (this.selectedType != '' ? '&construction-type=' + this.selectedType : '' );
-            request += (this.limit != 0 ? '&limit=' + this.limit : '' );
+            request += '&limit=' + this.limit;
 
             axios.get("/wp-json/kerigansolutions/v1/projects" + request)
                 .then(response => {

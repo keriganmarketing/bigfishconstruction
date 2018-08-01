@@ -5873,7 +5873,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         limit: {
             type: Number,
-            default: 0
+            default: -1
         },
         location: {
             type: String,
@@ -5904,7 +5904,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var request = '?1=1';
             request += this.selectedLocation != '' ? '&build-location=' + this.selectedLocation : '';
             request += this.selectedType != '' ? '&construction-type=' + this.selectedType : '';
-            request += this.limit != 0 ? '&limit=' + this.limit : '';
+            request += '&limit=' + this.limit;
 
             axios.get("/wp-json/kerigansolutions/v1/projects" + request).then(function (response) {
                 _this.portfolioItems = response.data;
