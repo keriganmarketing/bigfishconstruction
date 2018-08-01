@@ -461,7 +461,7 @@ function registerFields(){
 function team_shortcode() {
     $output =
     '<div class="team-grid">
-        <div class="row">';
+        <div class="row justify-content-center">';
 
     $team = new Team();
     $members = $team->queryTeam();
@@ -471,7 +471,7 @@ function team_shortcode() {
         '<div class="col-md-6 col-lg-4">
             <div class="card team-member text-center">
                 <a href="' . $member['link'] . '" >
-                    <img src="' . $member['image']['sizes']['medium'] . '" class="card-img-top" alt="' . $member['name'] . '" >
+                    <img src="' . $member['image']['sizes']['thumbnail'] . '" class="card-img-top" alt="' . $member['name'] . '" >
                 </a>
                 <div class="card-body">
                     <h3 class="text-uppercase text-dark">' . $member['name'] . '</h3>
