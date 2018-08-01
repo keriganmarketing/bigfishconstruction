@@ -12,5 +12,5 @@ bladerunner('views.pages.project', [
         'construciton_type' => get_the_terms($post->ID, 'construction-type')
     ],
     'headerImage' => $headerImageData['url'],
-    'headline'        => get_field('headline')
+    'headline'    => get_field('headline')
 ]);
