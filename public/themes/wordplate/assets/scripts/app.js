@@ -22923,7 +22923,7 @@ var render = function() {
           }
         },
         [
-          _c("p", { staticClass: "text-center" }, [
+          _c("div", { staticClass: "text-center image-container" }, [
             _vm.activePhoto.sizes
               ? _c("img", {
                   staticClass: "img-fluid",

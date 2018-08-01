@@ -10,7 +10,7 @@
             </div>
         </div>
         <b-modal ref="gallery" hide-header hide-footer size="lg" centered >
-            <p class="text-center"><img v-if="activePhoto.sizes" :src="activePhoto.sizes.large" :alt="activePhoto.title" class="img-fluid" /></p>
+            <div class="text-center image-container"><img v-if="activePhoto.sizes" :src="activePhoto.sizes.large" :alt="activePhoto.title" class="img-fluid" /></div>
             <div class="d-flex justify-content-center action-buttons">
                 <a @click="prevPhoto(activePhoto.index)" class="btn btn-outline-white"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                 <a @click="closeViewer" class="btn btn-outline-white" style="margin: 0 4px;">close</a>
