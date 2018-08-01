@@ -18591,7 +18591,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.photo-gallery {\n    padding: 2rem 0;\n}\n.photo-tile {\n    margin-bottom: 1rem;\n    cursor: pointer;\n}\n.modal .modal-content {\n    background-color: transparent !important;\n    border: none !important;\n}\n.modal .modal-body {\n    padding: 0 !important;\n}\n.modal {\n    background-color: rgba(0,0,0,.75);\n}\n.action-buttons a {\n    color: #FFF !important;\n}\n.action-buttons a:hover {\n    color: #000 !important;\n}\n", ""]);
+exports.push([module.i, "\n.photo-gallery {\n    padding: 2rem 0;\n}\n.photo-tile {\n    margin-bottom: 1rem;\n    cursor: pointer;\n}\n.modal .modal-content {\n    background-color: transparent !important;\n    border: none !important;\n}\n.modal .modal-body {\n    padding: 0 !important;\n}\n.modal {\n    background-color: rgba(0,0,0,.75);\n}\n.image-container {\n    max-height: 80vh;\n    margin-bottom: 1rem;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.action-buttons a {\n    color: #FFF !important;\n}\n.action-buttons a:hover {\n    color: #000 !important;\n}\n", ""]);
 
 // exports
 

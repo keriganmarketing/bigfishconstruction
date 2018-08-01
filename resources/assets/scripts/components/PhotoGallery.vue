@@ -81,6 +81,7 @@ import bModalDirective from 'bootstrap-vue/es/directives/modal/modal'
         margin-bottom: 1rem;
         cursor: pointer;
     }
+    
     .modal .modal-content {
         background-color: transparent !important;
         border: none !important;
@@ -90,6 +91,13 @@ import bModalDirective from 'bootstrap-vue/es/directives/modal/modal'
     }
     .modal {
         background-color: rgba(0,0,0,.75);
+    }
+    .image-container {
+        max-height: 80vh;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .action-buttons a {
         color: #FFF !important;
