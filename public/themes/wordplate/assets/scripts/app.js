@@ -5883,7 +5883,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var request = '?1=1';
             request += this.selectedLocation != '' ? '&build-location=' + this.selectedLocation : '';
             request += this.selectedType != '' ? '&construction-type=' + this.selectedType : '';
-            request += this.limit != '' ? '&limit=' + this.limit : '';
+            request += this.limit != undefined ? '&limit=' + this.limit : '';
 
             axios.get("/wp-json/kerigansolutions/v1/projects" + request).then(function (response) {
                 _this.portfolioItems = response.data;
@@ -19921,7 +19921,7 @@ var render = function() {
               [
                 _c("a", { attrs: { href: project.link } }, [
                   _c("img", {
-                    staticClass: "card-img-top",
+                    staticClass: "card-img-top img-fluid",
                     attrs: {
                       src: project.photo.sizes.thumbnail,
                       alt: project.name

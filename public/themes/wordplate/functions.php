@@ -493,21 +493,20 @@ function team_shortcode() {
 }
 add_shortcode( 'team', 'team_shortcode' );
 
-function portfolio_shortcode() {
+function portfolio_shortcode( $atts ) {
     $locations = json_encode(get_terms(['taxonomy' => 'build-location']));
     $types = get_terms(['taxonomy' => 'construction-type']);
 
     $a = [
         'selected-location' => (isset($_GET['location']) ? $_GET['location'] : ''),
         'selected-type'     => (isset($_GET['type']) ? $_GET['type'] : ''),
-        'limit'             => (isset($_GET['limit']) ? $_GET['limit'] : ''),
+        'limit'             => (isset($_GET['limit']) ? $_GET['limit'] : -1),
         'locations'         => htmlentities(json_encode(get_terms(['taxonomy' => 'build-location'])), ENT_QUOTES),
         'types'             => htmlentities(json_encode(get_terms(['taxonomy' => 'construction-type'])), ENT_QUOTES)
     ];
 
     $output =
     '<portfolio-gallery
-        limit="' . $a['limit'] . '"
         :locations="' . $a['locations'] . '"
         :construction-types="' . $a['types'] . '"
         location="'. $a['selected-location'] .'"

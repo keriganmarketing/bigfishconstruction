@@ -61,7 +61,7 @@
             <div v-for="(project, index) in portfolioItems" :key="index" class="col-md-6 col-lg-4">
                 <div class="card project-tile text-center border-light project-list-item">
                     <a :href="project.link" >
-                        <img :src="project.photo.sizes.thumbnail" class="card-img-top" :alt="project.name" >
+                        <img :src="project.photo.sizes.thumbnail" class="card-img-top img-fluid" :alt="project.name" >
                     </a>
                     <div class="card-body">
                         <h3 class="text-uppercase text-dark">{{ project.name }}</h3>
@@ -97,7 +97,7 @@ export default {
             let request = '?1=1';
             request += (this.selectedLocation != '' ? '&build-location=' + this.selectedLocation : '' );
             request += (this.selectedType != '' ? '&construction-type=' + this.selectedType : '' );
-            request += (this.limit != '' ? '&limit=' + this.limit : '' );
+            request += (this.limit != undefined ? '&limit=' + this.limit : '' );
 
             axios.get("/wp-json/kerigansolutions/v1/projects" + request)
                 .then(response => {
