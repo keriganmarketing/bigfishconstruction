@@ -19923,7 +19923,7 @@ var render = function() {
                   _c("img", {
                     staticClass: "card-img-top",
                     attrs: {
-                      src: project.photo.sizes.thumbnail,
+                      src: project.photo.sizes.medium,
                       alt: project.name
                     }
                   })
