@@ -93,7 +93,7 @@ import bModalDirective from 'bootstrap-vue/es/directives/modal/modal'
         background-color: rgba(0,0,0,.75);
     }
     .image-container {
-        max-height: 80vh;
+        height: 80vh;
         margin-bottom: 1rem;
         display: flex;
         justify-content: center;
