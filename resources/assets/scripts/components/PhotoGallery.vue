@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="photo-gallery">
-            <div class="row" >
-                <div class="col-sm-6 col-lg-4" v-for="(photo, index) in photos" v-bind:key="photo.id" >
+            <div class="row" v-masonry transition-duration="0.3s" item-selector=".item" >
+                <div v-masonry-tile class="col-sm-6 col-lg-4 item" v-for="(photo, index) in photos" v-bind:key="photo.id" >
                     <div class="photo-tile has-text-centered" @click="openViewer(index)">
                         <img :id="'photo-' + photo.id" :src="photo.sizes.medium" :alt="photo.title" class="img-fluid" >
                     </div>
@@ -79,6 +79,7 @@ import bModalDirective from 'bootstrap-vue/es/directives/modal/modal'
     }
     .photo-tile {
         margin-bottom: 1rem;
+        cursor: pointer;
     }
     .modal .modal-content {
         background-color: transparent !important;

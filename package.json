@@ -19,7 +19,8 @@
         "dotenv": "^6.0.0",
         "font-awesome": "^4.7.0",
         "laravel-mix": "^2.1.11",
-        "vue": "^2.5.16"
+        "vue": "^2.5.16",
+        "vue-masonry": "^0.11.4"
     },
     "browserslist": [
         ">0.25%",
