@@ -78,7 +78,28 @@
 
 <script>
 export default {
-    props: ['locations', 'constructionTypes', 'limit', 'location', 'type'],
+    props: {
+        locations: {
+            type: Array,
+            default: []
+        }, 
+        constructionTypes: {
+            type: Array,
+            default: []
+        }, 
+        limit: {
+            type: Number,
+            default: 0
+        }, 
+        location: {
+            type: String,
+            default: ''
+        }, 
+        type: {
+            type: String,
+            default: ''
+        }
+    },
 
     data () {
         return {
@@ -97,7 +118,7 @@ export default {
             let request = '?1=1';
             request += (this.selectedLocation != '' ? '&build-location=' + this.selectedLocation : '' );
             request += (this.selectedType != '' ? '&construction-type=' + this.selectedType : '' );
-            request += (this.limit != undefined ? '&limit=' + this.limit : '' );
+            request += (this.limit != 0 ? '&limit=' + this.limit : '' );
 
             axios.get("/wp-json/kerigansolutions/v1/projects" + request)
                 .then(response => {
