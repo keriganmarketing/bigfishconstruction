@@ -30,7 +30,7 @@ add_theme_support('plate-disable-editor', [
     'linkxfndiv',
     'postcustom',
     'postexcerpt',
-    'revisionsdiv',
+    //'revisionsdiv',
     'slugdiv',
     'sqpt-meta-tags',
     'trackbacksdiv',
@@ -64,7 +64,10 @@ add_theme_support('plate-disable-toolbar', [
 ]);
 
 // Disable dashboard tabs.
-add_theme_support('plate-disable-tabs', ['help', 'screen-options']);
+add_theme_support('plate-disable-tabs', [
+    'help', 
+    //'screen-options'
+]);
 
 // Set custom permalink structure.
 add_theme_support('plate-permalink', '/%postname%/');
