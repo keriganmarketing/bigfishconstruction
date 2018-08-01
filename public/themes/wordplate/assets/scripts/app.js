@@ -23164,7 +23164,9 @@ var render = function() {
               class: {
                 active: index == _vm.activeSlide
               },
-              style: { "background-image": "url(" + slide.photo.url + ")" }
+              style: {
+                "background-image": "url(" + slide.photo.sizes.large + ")"
+              }
             },
             [
               slide.href != ""

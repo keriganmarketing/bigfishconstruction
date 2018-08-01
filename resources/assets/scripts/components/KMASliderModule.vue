@@ -12,7 +12,7 @@
                     :class="{
                         'active': index == activeSlide
                     }"
-                    :style="{ 'background-image': 'url(' + slide.photo.url + ')' }">
+                    :style="{ 'background-image': 'url(' + slide.photo.sizes.large + ')' }">
                     <a class="slidelink" v-if="(slide.href != '')" :href="slide.href" :target="slide.target" ></a>
                 </div>
             </div>
