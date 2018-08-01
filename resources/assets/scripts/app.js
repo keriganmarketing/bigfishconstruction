@@ -5,6 +5,7 @@ window.axios = require("axios")
 require('./load-components')
 
 import {VueMasonryPlugin} from 'vue-masonry';
+Vue.use(VueMasonryPlugin)
 
 const app = new Vue({
     el: '#app',

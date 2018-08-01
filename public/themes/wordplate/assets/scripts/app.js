@@ -23245,7 +23245,7 @@ const collectOptions = function (attrs) {
 }
 
 const VueMasonryPlugin = function () {}
-/* unused harmony export VueMasonryPlugin */
+/* harmony export (immutable) */ __webpack_exports__["a"] = VueMasonryPlugin;
 
 
 VueMasonryPlugin.install = function (Vue, options) {
@@ -34752,6 +34752,7 @@ window.axios = __webpack_require__("./node_modules/axios/index.js");
 __webpack_require__("./resources/assets/scripts/load-components.js");
 
 
+Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_masonry__["a" /* VueMasonryPlugin */]);
 
 var app = new Vue({
     el: '#app',
