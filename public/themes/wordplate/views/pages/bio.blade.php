@@ -14,6 +14,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img class="img-fluid" src="{{ $team['image']['url'] }}">
+                            <p>&nbsp;</p>
                         </div>
                         <div class="col-md-8">
                             <p class="team-contact-info">
