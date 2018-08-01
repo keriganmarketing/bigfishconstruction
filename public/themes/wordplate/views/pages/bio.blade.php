@@ -17,20 +17,24 @@
                             <p>&nbsp;</p>
                         </div>
                         <div class="col-md-8">
-                            <p class="team-contact-info">
+                            <div class="row">
                             @if ($team['email'] != '')
-                                <a href="mailto:{{ $team['email'] }}">
-                                <span class="icon">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                </span>&nbsp;{{ $team['email'] }}</a> &nbsp; &nbsp;
+                                <div class="col-auto">
+                                    <a href="mailto:{{ $team['email'] }}">
+                                    <span class="icon">
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </span>&nbsp;{{ $team['email'] }}</a>
+                                </div>
                             @endif
                             @if ($team['phone'] != '')
-                                <a href="mailto:{{ $team['phone'] }}">
-                                <span class="icon">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </span>&nbsp;{{ $team['phone'] }}</a> &nbsp; &nbsp;
+                                <div class="col-auto">
+                                    <a href="mailto:{{ $team['phone'] }}">
+                                    <span class="icon">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </span>&nbsp;{{ $team['phone'] }}</a>
+                                </div>
                             @endif
-                        </p>
+                            </div>
                         <hr>
                         {{ the_content() }}
 
