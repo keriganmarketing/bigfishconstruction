@@ -37,6 +37,13 @@ body {
         }
 
     }
+
+    :-ms-input-placeholder,
+    ::placeholder {
+        color: #b4b4b4;
+        opacity: 1; 
+    }
+
 }
 
 .top {
