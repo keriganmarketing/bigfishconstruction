@@ -44,9 +44,9 @@ function build_location_init()
         'hierarchical' => true,
         'public' => true,
         'show_in_nav_menus' => false,
-        'show_in_menu' => false,
+        'show_in_menu' => true,
         'show_ui' => true,
-        'show_admin_column' => false,
+        'show_admin_column' => true,
         'query_var' => true,
         'rewrite' => true,
         'capabilities' => array(
