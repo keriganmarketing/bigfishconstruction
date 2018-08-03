@@ -206,10 +206,12 @@ main {
 
         h2 {
             margin-top: 3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             color: $secondary;
+            font-weight: 400;
             
             &::after {
+                content: none;
                 background-color: $secondary;
             }
         }
