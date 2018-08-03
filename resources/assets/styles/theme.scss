@@ -50,7 +50,7 @@ body {
     height: 70px;
     background-color: #f9feff;
     position: relative;
-    z-index: 5;
+    z-index: 6;
 
     @media (min-width: 576px) {
         height: 122px;
@@ -527,6 +527,9 @@ main {
 
 // Testimonial Section
 .testimonial-section {
+    background-image: url('/themes/wordplate/assets/images/pavers.jpg');
+    background-size: cover;
+    background-position: center;
     background-color: $dark;
     padding: 1rem 1rem 0;
     color: #FFF;
