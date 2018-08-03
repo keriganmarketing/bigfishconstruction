@@ -209,6 +209,7 @@ main {
             margin-bottom: 1rem;
             color: $secondary;
             font-weight: 400;
+            text-transform: capitalize;
             
             &::after {
                 content: none;
