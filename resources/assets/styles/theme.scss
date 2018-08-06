@@ -2,10 +2,6 @@
 html {
     height: 100%;
     
-    * {
-        font-family: 'Montserrat', sans-serif !important;
-    }
-
     // Button overrides
     .btn {
         text-transform: uppercase;
@@ -110,7 +106,7 @@ body {
         top: 33px;
         right: 15px;
         z-index: 301;
-        font-weight: $font-weight-black;
+        font-weight: $font-weight-bolder;
         letter-spacing: 2px;
         font-size: 20px;
 
