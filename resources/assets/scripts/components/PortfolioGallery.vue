@@ -4,11 +4,11 @@
             <a @click="togglePortfolioMenu" class="btn btn-outline-light text-center col-12 mb-4">Sort by Category</a>
             <div v-if="menuOpen" class="col-12 border border-light py-4 mb-4" >
                 <div 
-                    class="d-block text-center py-1" >
+                    class="d-block text-center py-2" >
                     <a href="/project-portfolio/" >All</a>
                 </div>
                 <div 
-                    class="d-block text-center py-1"
+                    class="d-block text-center py-2"
                     v-for="location in locations"
                     :key="location.index" >
                     <a
