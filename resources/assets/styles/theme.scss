@@ -1,6 +1,7 @@
 // Full page Layout
 html {
     height: 100%;
+    font-family: $font-family-base;
 
     // Button overrides
     .btn {
@@ -58,7 +59,7 @@ body {
 }
 
 .top {
-    height: 70px;
+    height: 108px;
     background-color: #f9feff;
     position: relative;
     z-index: 6;
@@ -70,8 +71,12 @@ body {
     a.logo {
         display: block;
         width: 211px;
-        margin: -33px auto 0;
+        margin: -41px auto 0;
         text-align: center;
+
+        @media (min-width: 576px) {
+            margin: -33px auto 0;
+        }
 
         img {
             position: absolute;
@@ -84,16 +89,14 @@ body {
             }
         }
 
-        &::after {
-            content: " ";
-            width: 421px;
-            height: 135px;
-            background: url('/themes/wordplate/assets/images/logo-snipe.png') center no-repeat;
-            position: absolute;
-            z-index: 299;
-            margin: -20px 0 0 -251px;
-
-            @media (min-width: 576px) {
+        @media (min-width: 576px) {
+            &::after {
+                content: " ";
+                width: 421px;
+                height: 135px;
+                background: url('/themes/wordplate/assets/images/logo-snipe.png') center no-repeat;
+                position: absolute;
+                z-index: 299;
                 margin: 38px 0 0 -210px;
             }
         }
@@ -101,12 +104,16 @@ body {
 
     .btn {
         position: absolute;
-        top: 15px;
+        top: 33px;
         right: 15px;
         z-index: 301;
         font-weight: $font-weight-black;
         letter-spacing: 2px;
         font-size: 20px;
+
+        @media (min-width: 576px) {
+            top: 15px;
+        }
     }
 
     .mobile-menu {
@@ -204,8 +211,12 @@ main {
 
     article {
         padding: 2rem 1rem 0;
-        text-align: justify;
+        text-align: left;
         background-color: #FFF;
+
+        @media (min-width: 576px){
+            text-align: justify;
+        }
 
         header {
             margin-bottom: 1rem;
@@ -386,17 +397,18 @@ main {
 .header-image {
     background-size: cover;
     background-position: center;
-    min-height: 100px;
+    min-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     @media (min-width: 768px){
-        min-height: 150px;
+        min-height: 200px;
     }
 
     @media (min-width: 992px){
-        min-height: 200px;
+        min-height: 240px;
     }
 
     h1, h2 {
@@ -413,7 +425,7 @@ main {
     }
 
     &.support {
-        padding: 1rem;
+        padding: 3rem 1rem;
         background-color: $dark;
         position: relative;
         overflow: hidden;
@@ -433,7 +445,8 @@ main {
         
         .container {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
+            align-items: flex-end;
             position: relative;
             z-index: 2;
         }
@@ -496,6 +509,8 @@ main {
 
 .projects-section {
     .header-image {
+        min-height: 160px;
+
         @media (min-width: 768px){
             min-height: 200px;
         }
@@ -509,11 +524,12 @@ main {
         }
 
         h1, h2 {
-            font-size: 2.75em;
+            font-size: 2em;
             letter-spacing: 2px;
             padding: 1rem 2rem;
-            height: 77px;
+            height: 68px;
             border-width: 3px;
+            text-align: center;
 
             @media (min-width: 576px){
                 font-size: 3.25em;

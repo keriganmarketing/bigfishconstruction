@@ -26,36 +26,6 @@
                     {{ location.name }}
                 </button>
             </div>
-            
-            <div class="col-auto" >
-                <div class="separator"></div>
-            </div>
-
-            <div class="col-auto" >
-                <button
-                    @click="getType('')"
-                    :class="{
-                        'btn btn-primary': selectedType === '',
-                        'btn btn-outline-light': selectedType !== ''  
-                    }"
-                >
-                    All
-                </button>
-            </div>
-            <div 
-                class="col-auto" 
-                v-for="constructionType in constructionTypes"
-                :key="constructionType.index">
-                <button
-                    @click="getType(constructionType.slug)"
-                    :class="{
-                        'btn btn-primary': selectedType === constructionType.slug,
-                        'btn btn-outline-light': selectedType !== constructionType.slug  
-                    }"
-                >
-                    {{ constructionType.name }}
-                </button>
-            </div>
         </div>
         <transition-group name="project-list" tag="div" class="row">
             <div v-for="(project, index) in portfolioItems" :key="index" class="col-md-6 col-lg-4">
@@ -81,11 +51,11 @@ export default {
     props: {
         locations: {
             type: Array,
-            default: []
+            default: () => []
         }, 
         constructionTypes: {
             type: Array,
-            default: []
+            default: () => []
         }, 
         limit: {
             type: Number,
