@@ -2360,7 +2360,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-family-sans-serif: "Montserrat", sans-serif;
   --font-family-monospace: "Liberation Mono", "Courier New", monospace;
 }
 
@@ -2398,7 +2398,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -8248,7 +8248,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -8373,7 +8373,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11894,7 +11894,7 @@ a.text-black:focus {
 
 html {
   height: 100%;
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html .btn {
