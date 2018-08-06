@@ -1,11 +1,7 @@
 <footer class="sticky-footer bg-black py-4">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-content">
-                    <main-menu :main-nav="{{ website_menu(14) }}" class="footer-menu" ></main-menu>
-                </div>
-            </div>
+            
             <div class="col-sm-6 col-lg-3">
                 <div class="footer-content">
                     <h4 class="short-underline">Port St. Joe Office</h4>
@@ -22,6 +18,12 @@
                     <contact-form></contact-form>
                 </div>
             </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="footer-content">
+                    <main-menu :main-nav="{{ website_menu(14) }}" class="footer-menu" ></main-menu>
+                </div>
+            </div>
+            
         </div>
     </div>
     <hr>
