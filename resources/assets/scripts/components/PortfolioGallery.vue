@@ -46,7 +46,11 @@
                 </button>
             </div>
         </div>
-        <transition-group name="project-list" tag="div" class="row justify-content-center items-center d-flex">
+        <transition-group 
+            name="project-list" 
+            tag="div" 
+            class="row justify-content-center items-center d-flex"
+            style="margin: 0 -30px;" >
             <div v-for="(project, index) in portfolioItems" :key="index" class="col-md-6 col-lg-4">
                 <div class="card project-tile text-center border-light project-list-item">
                     <a :href="project.link" >

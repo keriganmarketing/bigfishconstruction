@@ -5848,6 +5848,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -22721,6 +22725,7 @@ var render = function() {
         "transition-group",
         {
           staticClass: "row justify-content-center items-center d-flex",
+          staticStyle: { margin: "0 -30px" },
           attrs: { name: "project-list", tag: "div" }
         },
         _vm._l(_vm.portfolioItems, function(project, index) {
