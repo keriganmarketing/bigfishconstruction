@@ -483,7 +483,7 @@ function testimonial_shortcode( $atts ) {
         <div class="testimonial list" id="' . $item->ID . '" >
             <p class="testimonial-date" >' . get_the_date('', $item) . '</p>
             ' . apply_filters('the_content', $item->post_content) . '
-            <p class="author" >' . $item->byline . '</p>
+            <p class="author" >&mdash;' . $item->byline . '</p>
         </div>
         ';
     }
