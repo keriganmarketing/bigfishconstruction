@@ -1,5 +1,24 @@
 <template>
     <div class="portfolio-gallery">
+        <div class="row justify-content-center items-center mobile-portfolio-filter d-flex d-md-none">
+            <a @click="togglePortfolioMenu" class="btn btn-outline-light text-center col-12 mb-4">Sort by Category</a>
+            <div v-if="menuOpen" class="col-12 border border-light py-4 mb-4" >
+                <div 
+                    class="d-block text-center py-1" >
+                    <a href="/project-portfolio/" >All</a>
+                </div>
+                <div 
+                    class="d-block text-center py-1"
+                    v-for="location in locations"
+                    :key="location.index" >
+                    <a
+                        :href="'/project-portfolio/?location=' + location.slug"
+                    >
+                        {{ location.name }}
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="row justify-content-center items-center portfolio-filters d-none d-md-flex">
             <div class="col-auto" >
                 <button 
@@ -27,7 +46,7 @@
                 </button>
             </div>
         </div>
-        <transition-group name="project-list" tag="div" class="row">
+        <transition-group name="project-list" tag="div" class="row justify-content-center items-center d-flex">
             <div v-for="(project, index) in portfolioItems" :key="index" class="col-md-6 col-lg-4">
                 <div class="card project-tile text-center border-light project-list-item">
                     <a :href="project.link" >
@@ -50,11 +69,7 @@
 export default {
     props: {
         locations: {
-            type: Array,
-            default: () => []
-        }, 
-        constructionTypes: {
-            type: Array,
+            type: Object,
             default: () => []
         }, 
         limit: {
@@ -75,7 +90,8 @@ export default {
         return {
             portfolioItems: [],
             selectedLocation: this.location,
-            selectedType: this.type
+            selectedType: this.type,
+            menuOpen: false
         }
     },
 
@@ -104,6 +120,9 @@ export default {
             this.selectedType = slug;
             this.fetch();
         },
+        togglePortfolioMenu() {
+            this.menuOpen = !this.menuOpen;
+        }
     }
 }
 </script>

@@ -111,59 +111,6 @@ function build_location_updated_messages($messages)
 add_filter('term_updated_messages', 'build_location_updated_messages');
 
 /**
- * Registers the `construction_type` taxonomy,
- * for use with 'project'.
- */
-function construction_type_init()
-{
-    register_taxonomy('construction-type', array('project'), array(
-        'hierarchical' => true,
-        'public' => true,
-        'show_in_nav_menus' => true,
-        'show_in_menu' => true,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capabilities' => array(
-            'manage_terms' => 'edit_posts',
-            'edit_terms' => 'edit_posts',
-            'delete_terms' => 'edit_posts',
-            'assign_terms' => 'edit_posts',
-        ),
-        'labels' => array(
-            'name' => __('Construction types', 'YOUR-TEXTDOMAIN'),
-            'singular_name' => _x('Construction type', 'taxonomy general name', 'YOUR-TEXTDOMAIN'),
-            'search_items' => __('Search Construction types', 'YOUR-TEXTDOMAIN'),
-            'popular_items' => __('Popular Construction types', 'YOUR-TEXTDOMAIN'),
-            'all_items' => __('All Construction types', 'YOUR-TEXTDOMAIN'),
-            'parent_item' => __('Parent Construction type', 'YOUR-TEXTDOMAIN'),
-            'parent_item_colon' => __('Parent Construction type:', 'YOUR-TEXTDOMAIN'),
-            'edit_item' => __('Edit Construction type', 'YOUR-TEXTDOMAIN'),
-            'update_item' => __('Update Construction type', 'YOUR-TEXTDOMAIN'),
-            'view_item' => __('View Construction type', 'YOUR-TEXTDOMAIN'),
-            'add_new_item' => __('New Construction type', 'YOUR-TEXTDOMAIN'),
-            'new_item_name' => __('New Construction type', 'YOUR-TEXTDOMAIN'),
-            'separate_items_with_commas' => __('Separate construction types with commas', 'YOUR-TEXTDOMAIN'),
-            'add_or_remove_items' => __('Add or remove construction types', 'YOUR-TEXTDOMAIN'),
-            'choose_from_most_used' => __('Choose from the most used construction types', 'YOUR-TEXTDOMAIN'),
-            'not_found' => __('No construction types found.', 'YOUR-TEXTDOMAIN'),
-            'no_terms' => __('No construction types', 'YOUR-TEXTDOMAIN'),
-            'menu_name' => __('Construction types', 'YOUR-TEXTDOMAIN'),
-            'items_list_navigation' => __('Construction types list navigation', 'YOUR-TEXTDOMAIN'),
-            'items_list' => __('Construction types list', 'YOUR-TEXTDOMAIN'),
-            'most_used' => _x('Most Used', 'construction-type', 'YOUR-TEXTDOMAIN'),
-            'back_to_items' => __('&larr; Back to Construction types', 'YOUR-TEXTDOMAIN'),
-        ),
-        'show_in_rest' => true,
-        'rest_base' => 'construction-type',
-        'rest_controller_class' => 'WP_REST_Terms_Controller',
-    ));
-
-}
-add_action('init', 'construction_type_init');
-
-/**
  * Sets the post updated messages for the `construction_type` taxonomy.
  *
  * @param  array $messages Post updated messages.
@@ -494,21 +441,23 @@ function team_shortcode() {
 add_shortcode( 'team', 'team_shortcode' );
 
 function portfolio_shortcode( $atts ) {
-    $locations = json_encode(get_terms(['taxonomy' => 'build-location']));
-    $types = get_terms(['taxonomy' => 'construction-type']);
+    $locations = get_terms(['taxonomy' => 'build-location']);
 
     $a = [
         'selected-location' => (isset($_GET['location']) ? $_GET['location'] : ''),
         'selected-type'     => (isset($_GET['type']) ? $_GET['type'] : ''),
         'limit'             => (isset($_GET['limit']) ? $_GET['limit'] : -1),
         'locations'         => htmlentities(json_encode(get_terms(['taxonomy' => 'build-location'])), ENT_QUOTES),
-        'types'             => htmlentities(json_encode(get_terms(['taxonomy' => 'construction-type'])), ENT_QUOTES)
     ];
+
+    $selectOptions = '';
+    foreach($locations as $term){
+        $selectOptions .= '<option value="'.$term->slug.'">'.$term->name.'</option>';
+    }
 
     $output =
     '<portfolio-gallery
         :locations="' . $a['locations'] . '"
-        :construction-types="' . $a['types'] . '"
         location="'. $a['selected-location'] .'"
         type="'. $a['selected-type'] .'"
         ></portfolio-gallery>';

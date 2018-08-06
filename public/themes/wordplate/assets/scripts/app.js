@@ -5829,17 +5829,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
         locations: {
-            type: Array,
-            default: function _default() {
-                return [];
-            }
-        },
-        constructionTypes: {
-            type: Array,
+            type: Object,
             default: function _default() {
                 return [];
             }
@@ -5862,7 +5875,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             portfolioItems: [],
             selectedLocation: this.location,
-            selectedType: this.type
+            selectedType: this.type,
+            menuOpen: false
         };
     },
     created: function created() {
@@ -5890,6 +5904,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getType: function getType(slug) {
             this.selectedType = slug;
             this.fetch();
+        },
+        togglePortfolioMenu: function togglePortfolioMenu() {
+            this.menuOpen = !this.menuOpen;
         }
     }
 });
@@ -22592,6 +22609,63 @@ var render = function() {
         "div",
         {
           staticClass:
+            "row justify-content-center items-center mobile-portfolio-filter d-flex d-md-none"
+        },
+        [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-light text-center col-12 mb-4",
+              on: { click: _vm.togglePortfolioMenu }
+            },
+            [_vm._v("Sort by Category")]
+          ),
+          _vm._v(" "),
+          _vm.menuOpen
+            ? _c(
+                "div",
+                { staticClass: "col-12 border border-light py-4 mb-4" },
+                [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _vm._l(_vm.locations, function(location) {
+                    return _c(
+                      "div",
+                      {
+                        key: location.index,
+                        staticClass: "d-block text-center py-1"
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href:
+                                "/project-portfolio/?location=" + location.slug
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(location.name) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  })
+                ],
+                2
+              )
+            : _vm._e()
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
             "row justify-content-center items-center portfolio-filters d-none d-md-flex"
         },
         [
@@ -22645,7 +22719,10 @@ var render = function() {
       _vm._v(" "),
       _c(
         "transition-group",
-        { staticClass: "row", attrs: { name: "project-list", tag: "div" } },
+        {
+          staticClass: "row justify-content-center items-center d-flex",
+          attrs: { name: "project-list", tag: "div" }
+        },
         _vm._l(_vm.portfolioItems, function(project, index) {
           return _c("div", { key: index, staticClass: "col-md-6 col-lg-4" }, [
             _c(
@@ -22694,7 +22771,16 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-block text-center py-1" }, [
+      _c("a", { attrs: { href: "/project-portfolio/" } }, [_vm._v("All")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
