@@ -455,13 +455,6 @@ main {
             z-index: 2;
         }
     }
-
-    &.contact {
-        @media (max-width: 1200px){
-            padding: 60px 0 0;
-            background-color: $dark;
-        }
-    }
 }
 
 // Main Slider
