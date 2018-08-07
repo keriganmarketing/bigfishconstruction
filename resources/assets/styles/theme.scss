@@ -42,12 +42,16 @@ body {
                         min-height: 350px;
                         flex-grow: 1;
 
+                        @media (min-width: 1200px){
+                            min-height: 420px;
+                        }
+
                         @media (min-width: 2200px){
-                            min-height: 450px;
+                            min-height: 500px;
                         }
 
                         @media (min-width: 2600px){
-                            min-height: 550px;
+                            min-height: 650px;
                         }
                     }
                 }
@@ -429,7 +433,7 @@ main {
     }
 
     @media (min-width: 992px){
-        min-height: 260px;
+        min-height: 235px;
     }
 
     h1, h2 {
