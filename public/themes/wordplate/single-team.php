@@ -12,6 +12,6 @@ bladerunner('views.pages.bio', [
         'instagram' => get_field('instagram'),
         'twitter' => get_field('twitter')
     ],
-    'headerImage' => $headerImageData['url'],
+    'headerImage' => isset($headerImageData['url']) ? $headerImageData['url'] : 'https://demo.bigfishconstruction.com/uploads/2018/08/img_5520-e1533138862672.jpg',
     'headline'    => get_field('headline')
 ]);
