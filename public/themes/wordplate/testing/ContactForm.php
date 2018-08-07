@@ -31,6 +31,7 @@ class ContactForm
         }
         $this->persistToDashboard();
         $this->sendEmail();
+        $this->sendBounceback();
 
         return rest_ensure_response(json_encode(['message' => 'Success']));
     }
@@ -42,9 +43,27 @@ class ContactForm
 
         $message = new Message();
         $message->setHeadline('New Contact Request')
-                ->setBody($this->messageBody())
+                ->setBody($this->messageBody('You\'ve received a new contact request.'))
                 ->setHeaders($headers)
                 ->setSubject('New Contact Request')
+                ->setPrimaryColor('#b73838')
+                ->setSecondaryColor('#d74f0b')
+                ->to($this->email);
+
+        $mail = new KMAMail($message);
+        $mail->send('web@kerigan.com');
+    }
+
+    public function sendBounceback()
+    {
+        $headers  = 'MIME-Version: 1.0' . PHP_EOL;
+        $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
+
+        $message = new Message();
+        $message->setHeadline('Thank you for contacting Big Fish Construction')
+                ->setBody($this->messageBody('We\'ve received your request. Here\'s a copy of what you submitted. We\ll be in touch soon!' ))
+                ->setHeaders($headers)
+                ->setSubject('Your Contact Request')
                 ->setPrimaryColor('#b73838')
                 ->setSecondaryColor('#d74f0b')
                 ->to($this->email);
@@ -53,10 +72,16 @@ class ContactForm
         $mail->send();
     }
 
-    public function messageBody()
+    public function messageBody( $introText )
     {
         return '
-        <p>You\'ve received a new contact request.</p>
+        <p>'.$introText.'</p>' .
+        $this->formInformation();
+    }
+
+    public function formInformation()
+    {
+        return '
         <table cellspacing="0" cellpadding="0" border="0" class="datatable">
             <tr><td>Name</td><td>' . $this->name . '</td></tr>
             <tr><td>Email</td><td>' . $this->email . '</td></tr>
