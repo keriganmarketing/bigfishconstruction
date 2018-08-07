@@ -33,6 +33,24 @@ body {
             
             main {
                 flex-grow: 1;
+
+                &.contact {
+                    background-color: $black;
+
+                    iframe {
+                        height: 100%;
+                        min-height: 350px;
+                        flex-grow: 1;
+
+                        @media (min-width: 2200px){
+                            min-height: 450px;
+                        }
+
+                        @media (min-width: 2600px){
+                            min-height: 550px;
+                        }
+                    }
+                }
             }
             
             &.full-height {
