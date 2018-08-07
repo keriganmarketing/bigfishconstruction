@@ -85,7 +85,7 @@ class ContactForm
         <table cellspacing="0" cellpadding="0" border="0" class="datatable">
             <tr><td>Name</td><td>' . $this->name . '</td></tr>
             <tr><td>Email</td><td>' . $this->email . '</td></tr>
-            <tr><td>AdditionalInformation</td><td>' . $this->comments  . '</td></tr>
+            <tr><td>Additional Information</td><td>' . $this->comments  . '</td></tr>
         </table>
         ';
     }
