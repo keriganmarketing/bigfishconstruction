@@ -94,7 +94,7 @@ class PermitForm
 
         $message = new Message();
         $message->setHeadline('New Plans & Permitting Request')
-                ->setBody($this->messageBody('You\'ve received a new Plans & Permitting request'))
+                ->setBody($this->messageBody('You\'ve received a new Plans & Permitting request.'))
                 ->setHeaders($headers)
                 ->setSubject('New Plans & Permitting Request')
                 ->setPrimaryColor('#b73838')

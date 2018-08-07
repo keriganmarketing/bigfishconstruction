@@ -48,10 +48,10 @@ class ContactForm
                 ->setSubject('New Contact Request')
                 ->setPrimaryColor('#b73838')
                 ->setSecondaryColor('#d74f0b')
-                ->to($this->email);
+                ->to('web@kerigan.com');
 
         $mail = new KMAMail($message);
-        $mail->send('web@kerigan.com');
+        $mail->send();
     }
 
     public function sendBounceback()
@@ -61,7 +61,7 @@ class ContactForm
 
         $message = new Message();
         $message->setHeadline('Thank you for contacting Big Fish Construction')
-                ->setBody($this->messageBody('We\'ve received your request. Here\'s a copy of what you submitted. We\ll be in touch soon!' ))
+                ->setBody($this->messageBody('We\'ve received your request. Here\'s a copy of what you submitted. We\'ll be in touch soon!' ))
                 ->setHeaders($headers)
                 ->setSubject('Your Contact Request')
                 ->setPrimaryColor('#b73838')
