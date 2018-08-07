@@ -425,8 +425,8 @@ main {
     min-height: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    align-items: flex-end;
 
     @media (min-width: 768px){
         min-height: 200px;
