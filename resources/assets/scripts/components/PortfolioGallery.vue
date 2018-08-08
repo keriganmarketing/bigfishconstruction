@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="project-button text-center">
-                    <a :href="project.link" class="btn btn-outline-light" >View Project</a>
+                    <a :href="project.link" class="btn btn-outline-light" >View</a>
                 </div>
             </div>
         </transition-group>

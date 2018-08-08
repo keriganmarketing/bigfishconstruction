@@ -428,6 +428,10 @@ main {
     text-align: center;
     align-items: flex-end;
 
+    &.home {
+        align-items: center;
+    }
+
     @media (min-width: 768px){
         min-height: 200px;
     }
