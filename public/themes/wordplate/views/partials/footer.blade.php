@@ -18,7 +18,7 @@
                     <contact-form></contact-form>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-3 text-md-right">
                 <div class="footer-content">
                     <main-menu :main-nav="{{ website_menu(14) }}" class="footer-menu" ></main-menu>
                 </div>
