@@ -247,7 +247,7 @@ main {
             margin-bottom: 1rem;
         }
 
-        .fittext span, h1 {
+        .fittext span, h1, .home-header  {
             color: $primary;
             text-transform: uppercase;
             font-weight: $font-weight-bolder;
@@ -440,7 +440,7 @@ main {
         min-height: 235px;
     }
 
-    h1, h2 {
+    h1, h2{
         display: inline-block;
         padding: .75rem 1rem;
         border: 1px solid #FFF;

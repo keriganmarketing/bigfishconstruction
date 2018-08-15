@@ -13,7 +13,7 @@
                     <div class="col-lg-7">
                         <article class="front">
                             <header class="fittext">
-                                <fit-text :max="3.05">Your Beach Dream</fit-text>
+                                <fit-text class="home-header" :max="3.05">Your Beach Dream</fit-text>
                             </header>
                             
                             {{ the_content() }}
