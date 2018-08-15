@@ -1,6 +1,12 @@
 import "babel-polyfill"
 window.Vue = require('vue')
 window.axios = require("axios")
+import { cacheAdapterEnhancer, throttleAdapterEnhancer } from 'axios-extensions';
+
+window.http = axios.create({
+	baseURL: '/',
+	adapter: cacheAdapterEnhancer(axios.defaults.adapter)
+});
 
 require('./load-components')
 
