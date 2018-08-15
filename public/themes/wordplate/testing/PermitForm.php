@@ -99,7 +99,7 @@ class PermitForm
                 ->setSubject('New Plans & Permitting Request')
                 ->setPrimaryColor('#b73838')
                 ->setSecondaryColor('#d74f0b')
-                ->to('web@kerigan.com');
+                ->to('steve.bigfish@gmail.com, bospring.bigfish@gmail.com, claywilliams.bigfish@gmail.com, ladonna.bigfish@gmail.com');
 
         $mail = new KMAMail($message);
         $mail->send();
