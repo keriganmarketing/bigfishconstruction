@@ -5,7 +5,8 @@ import { cacheAdapterEnhancer, throttleAdapterEnhancer } from 'axios-extensions'
 
 window.http = axios.create({
 	baseURL: '/',
-	adapter: cacheAdapterEnhancer(axios.defaults.adapter)
+	headers: { 'Cache-Control': 'no-cache' },
+	adapter: throttleAdapterEnhancer(axios.defaults.adapter, { threshold: 2 * 1000 })
 });
 
 require('./load-components')
