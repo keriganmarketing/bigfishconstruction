@@ -181,6 +181,27 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('wordplate', mix('scripts/app.js'), '', '', true);
 });
 
+// Remove uneccesary scripts
+function disable_wp_scripts() {
+    
+    //post navigation
+    remove_action('wp_head', 'rsd_link'); // Removes the Really Simple Discovery link
+    remove_action('wp_head', 'wlwmanifest_link'); // Removes the Windows Live Writer link
+    remove_action('wp_head', 'wp_generator'); // Removes the WordPress version
+    remove_action('wp_head', 'start_post_rel_link'); // Removes the random post link
+    remove_action('wp_head', 'index_rel_link'); // Removes the index page link
+    remove_action('wp_head', 'adjacent_posts_rel_link'); // Removes the next and previous post links
+    remove_action('wp_head', 'parent_post_rel_link', 10, 0); // remove parent post link
+
+    //emojis
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+  }
+  add_action( 'init', 'disable_wp_scripts' );
+
 // Remove query strings from static resouces
 function _remove_script_version( $src ){ 
     if(is_string($src)){
