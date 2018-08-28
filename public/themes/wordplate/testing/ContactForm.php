@@ -26,6 +26,8 @@ class ContactForm
     public function submitContactForm(WP_REST_Request $request)
     {
         $this->request = $request;
+        $this->comments =  $this->request->get_param('comments') !== '' ? $this->request->get_param('comments') : null;
+
         if ($this->hasErrors()) {
             return new \WP_Error($this->errorCode, $this->errorMessage, self::VALIDATION_ERROR);
         }
