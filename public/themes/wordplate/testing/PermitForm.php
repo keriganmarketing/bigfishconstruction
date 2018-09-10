@@ -133,7 +133,7 @@ class PermitForm
     public function formInformation()
     {
         return '
-        <table cellspacing="0" cellpadding="0" border="0" class="datatable">
+        <table cellspacing="0" cellpadding="0" border="0" class="datatable" width="100%" style="width: 100%;">
             <tr><td>Name</td><td>' . $this->name . '</td></tr>
             <tr><td>Email</td><td>' . $this->email . '</td></tr>
             <tr><td>Max Buildable Width</td><td>' . $this->maxWidth . '</td></tr>
