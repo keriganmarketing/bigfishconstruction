@@ -30,7 +30,7 @@
     <p class="copyright text-center">State Certified Building Contractor – {{ get_field('license_number', 'option') }}</p>
     <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}. All Rights&nbsp;Reserved. 
         <a style="text-decoration:underline;" href="/privacy-policy" >Privacy&nbsp;Policy</a> 
-        <span class="siteby d-flex align-items-center d-sm-inline-flex pt-1 mx-auto mx-sm-0" style="opacity: .8;">
+        <span class="siteby d-inline-flex align-items-center pt-2" style="opacity: .8;">
             <svg version="1.1" id="kma" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="14" width="20"
                 viewBox="0 0 12.5 8.7" style="enable-background:new 0 0 12.5 8.7;"
