@@ -9,13 +9,13 @@
                         <img src="/themes/wordplate/assets/images/number-one-home-builder.png" alt="#1 Homebuilder of the Forgotten Coast" >
                     </div>
                     <div class="projects-complete">
-                        <img src="/themes/wordplate/assets/images/home-projects-completed.png" alt="350+ Projects Complete" >
+                        <img src="/themes/wordplate/assets/images/500-home-projects-completed.png" alt="500+ Projects Complete" >
                     </div>
                 </div>
                 <div class="map-spacer">
 
                 </div>
-                
+
             </div>
             <div style="clear:both"></div>
         </div>
